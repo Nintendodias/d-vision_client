@@ -108,7 +108,7 @@
 
 				@keyframes rainbow {
 					0% {
-						transform: rotate(45deg) translateY(-100vh)
+						transform: rotate(45deg) translateY(-150vh)
 					}
 					100% {
 						transform: rotate(45deg) translateY(100vh)
