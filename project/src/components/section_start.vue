@@ -63,16 +63,17 @@
 			bottom: 0;
 			left: 0;
 			overflow: hidden;
-			animation: animatedBlocks 2s 2s both;
 
 			.rainbow-line {
 				position: absolute;
-				width: 3px;
-				background: linear-gradient(to bottom, #f6df0b, #aa2ecc, #f7017a);
+				width: 1px;
+				background: linear-gradient(to top, var(--color-white), transparent);
+				box-shadow: 0 0 5px var(--color-white);
+				opacity: .5;
 				transform: rotate(45deg);
 				animation: rainbow 1s 3s infinite both;
 				animation-name: rainbow;
-				animation-duration: 2s;
+				animation-duration: 3s;
 				animation-iteration-count: infinite;
 				animation-fill-mode: both;
 
@@ -80,25 +81,25 @@
 					left: 7%;
 					top: 30px;
 					height: 20vh;
-					animation-delay: 3s;
+					animation-delay: 2s;
 				}
 				&[data-rainbow='2'] {
 					left: 24%;
 					top: 154px;
 					height: 60vh;
-					animation-delay: 3.2s;
+					animation-delay: 2.2s;
 				}
 				&[data-rainbow='3'] {
 					left: 27%;
 					top: 447px;
 					height: 30vh;
-					animation-delay: 3.1s;
+					animation-delay: 2.1s;
 				}
 				&[data-rainbow='4'] {
 					right: 44%;
 					top: 268px;
 					height: 67vh;
-					animation-delay: 4s;
+					animation-delay: 3s;
 				}
 				&[data-rainbow='5'] {
 					right: 0;
@@ -124,6 +125,7 @@
 				background: linear-gradient(to bottom, #2f0078, #4256fe);
 				transform: rotate(45deg);
 				opacity: 0.5;
+				animation: animatedBlocks 2s both;
 
 				&[data-bg='1'] {
 					left: 10%;
@@ -139,10 +141,10 @@
 				}
 				@keyframes animatedBlocks {
 					0% {
-						height: 0%;
+						transform: rotate(45deg) translateY(-157vh)
 					}
 					100% {
-						height: 100%;
+						translate: rotate(45deg) translateY(0);
 					}
 				}
 			}
