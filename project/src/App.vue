@@ -50,7 +50,8 @@
 		--main-font: 'Roboto', sans-serif;
 		--main-color: #272727;
 		--color-white: #fff;
-		--main-font-size: 18px;
+    --main-font-size: 18px;
+    --color-pink: #e07e94;
 	}
 	#wrapper {
     &[data-scroll='1'] {

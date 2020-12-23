@@ -1,5 +1,5 @@
 <template>
-	<section class="section_start">
+	<section :style="{ background: gradient }" class="section_start" @mousemove="animateSectionStart">
 		<div id="container_bg">
 			<div class="item-bg" data-bg="1"></div>
 			<div class="item-bg" data-bg="2"></div>
@@ -31,6 +31,18 @@
 		props: {
 			msg: String,
 		},
+		data() {
+			return {
+				gradient:
+					'linear-gradient(134.41deg,#e07e94 -5.96%,#2f0078 16.04%,#2f0078 45.53%,#2f0078 77.82%,#451ab2 100%)',
+			};
+		},
+		methods: {
+			animateSectionStart: function(event) {
+				let count = event.clientX / 40;
+				this.gradient = `linear-gradient(${134.41 - count}deg, #e07e94 -5.96%,#2f0078 16.04%,#2f0078 45.53%,#2f0078 77.82%,#451ab2 100%)`;
+			},
+		},
 	};
 </script>
 
@@ -40,14 +52,7 @@
 		min-height: 100vh;
 		display: flex;
 		align-items: center;
-		background: linear-gradient(
-			134.41deg,
-			#e07e94 -5.96%,
-			#2f0078 16.04%,
-			#2f0078 45.53%,
-			#2f0078 77.82%,
-			#451ab2 100%
-		);
+		background: #fff;
 		img {
 			margin-bottom: 2em;
 		}
@@ -82,36 +87,32 @@
 					top: 154px;
 					height: 60vh;
 					animation-delay: 3.2s;
-
 				}
 				&[data-rainbow='3'] {
 					left: 27%;
 					top: 447px;
 					height: 30vh;
 					animation-delay: 3.1s;
-
 				}
 				&[data-rainbow='4'] {
 					right: 44%;
 					top: 268px;
 					height: 67vh;
 					animation-delay: 4s;
-
 				}
 				&[data-rainbow='5'] {
 					right: 0;
 					height: 100vh;
 					top: 139px;
 					animation-delay: 3.5s;
-
 				}
 
 				@keyframes rainbow {
 					0% {
-						transform: rotate(45deg) translateY(-150vh)
+						transform: rotate(45deg) translateY(-150vh);
 					}
 					100% {
-						transform: rotate(45deg) translateY(100vh)
+						transform: rotate(45deg) translateY(100vh);
 					}
 				}
 			}
@@ -122,7 +123,7 @@
 				height: 100vh;
 				background: linear-gradient(to bottom, #2f0078, #4256fe);
 				transform: rotate(45deg);
-				opacity: .5;
+				opacity: 0.5;
 
 				&[data-bg='1'] {
 					left: 10%;

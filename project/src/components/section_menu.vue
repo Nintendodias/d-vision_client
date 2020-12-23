@@ -1,10 +1,9 @@
 <template>
 	<menu class="section_menu">
-		
 		<div class="grid">
 			<b-navbar toggleable="lg">
 				<b-navbar-brand href="#">
-					<img src="../assets/logo_d-vision.png" alt="" id="logo">
+					<img src="../assets/logo_d-vision.png" alt="" id="logo" />
 				</b-navbar-brand>
 
 				<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -32,7 +31,7 @@
 			return {
 				tab: 1,
 			};
-		},
+		}
 	};
 </script>
 
@@ -50,10 +49,28 @@
 			transition: 1s;
 			color: var(--color-white) !important;
 
-			&.active, &:hover {
-				color: #e07e94 !important;
+			&.active,
+			&:hover {
+				color: var(--color-pink) !important;
+
+				&:after {
+					content: '';
+					display: block;
+					width: 0;
+					height: 2px;
+					background: var(--color-pink);
+					animation: rising 1s both;
+
+					@keyframes rising {
+						0% {
+							width: 0;
+						}
+						100% {
+							width: 100%;
+						}
+					}
+				}
 			}
 		}
-		
 	}
 </style>
