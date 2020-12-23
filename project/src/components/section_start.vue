@@ -65,31 +65,54 @@
 				width: 3px;
 				background: linear-gradient(to bottom, #f6df0b, #aa2ecc, #f7017a);
 				transform: rotate(45deg);
+				animation: rainbow 1s 3s infinite both;
+				animation-name: rainbow;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-fill-mode: both;
 
 				&[data-rainbow='1'] {
 					left: 7%;
 					top: 30px;
 					height: 20vh;
+					animation-delay: 3s;
 				}
 				&[data-rainbow='2'] {
 					left: 24%;
 					top: 154px;
 					height: 60vh;
+					animation-delay: 3.2s;
+
 				}
 				&[data-rainbow='3'] {
 					left: 27%;
 					top: 447px;
 					height: 30vh;
+					animation-delay: 3.1s;
+
 				}
 				&[data-rainbow='4'] {
 					right: 44%;
 					top: 268px;
 					height: 67vh;
+					animation-delay: 4s;
+
 				}
 				&[data-rainbow='5'] {
 					right: 0;
 					height: 100vh;
 					top: 139px;
+					animation-delay: 3.5s;
+
+				}
+
+				@keyframes rainbow {
+					0% {
+						transform: rotate(45deg) translateY(-100vh)
+					}
+					100% {
+						transform: rotate(45deg) translateY(100vh)
+					}
 				}
 			}
 			.item-bg {
@@ -99,6 +122,7 @@
 				height: 100vh;
 				background: linear-gradient(to bottom, #2f0078, #4256fe);
 				transform: rotate(45deg);
+				opacity: .5;
 
 				&[data-bg='1'] {
 					left: 10%;
