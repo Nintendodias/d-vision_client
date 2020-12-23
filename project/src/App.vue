@@ -1,5 +1,5 @@
 <template>
-	<div id="wrapper">
+	<div id="wrapper" data-scroll='1'>
 		<section_menu />
 		<section_start />
 	</div>
@@ -53,6 +53,11 @@
 		--main-font-size: 18px;
 	}
 	#wrapper {
+    &[data-scroll='1'] {
+			#logo {
+				visibility: hidden;
+			}
+		}
 	}
 	img {
 		display: block;
@@ -235,5 +240,8 @@
 	}
 	.grid__col._lg_12 {
 		width: 100%;
-	}
+  }
+  h1 {
+    font-size: 40px;
+  }
 </style>

@@ -1,9 +1,10 @@
 <template>
 	<menu class="section_menu">
+		
 		<div class="grid">
 			<b-navbar toggleable="lg">
 				<b-navbar-brand href="#">
-					<img src="../assets/logo_d-vision.png" alt="">
+					<img src="../assets/logo_d-vision.png" alt="" id="logo">
 				</b-navbar-brand>
 
 				<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -41,7 +42,18 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		background: red;
+		background: none;
 		margin: 0;
+		z-index: 50;
+
+		.nav-link {
+			transition: 1s;
+			color: var(--color-white) !important;
+
+			&.active, &:hover {
+				color: #e07e94 !important;
+			}
+		}
+		
 	}
 </style>
