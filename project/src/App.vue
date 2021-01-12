@@ -1,7 +1,9 @@
 <template>
-	<div id="wrapper" data-scroll='1'>
+	<div id="wrapper" data-scroll="1">
 		<section_menu />
 		<section_start />
+		<section_about />
+		<section_wedo />
 	</div>
 </template>
 
@@ -17,18 +19,23 @@
 
 	import section_menu from './components/section_menu.vue';
 	import section_start from './components/section_start.vue';
+  import section_about from './components/section_about.vue';
+  import section_wedo from './components/section_wedo.vue';
 
 	export default {
 		name: 'App',
 		components: {
 			section_menu,
 			section_start,
+			section_about,
+			section_wedo,
 		},
 	};
 </script>
 
 <style lang="less">
-	@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 	#wrapper {
 		font-family: var(--main-font);
 		color: var(--main-color);
@@ -38,6 +45,7 @@
 		font-style: normal;
 		font-size: var(--main-font-size);
 		line-height: 1.666;
+		background: linear-gradient(180deg, #191355 0%, #371365 100%);
 	}
 	body {
 		overflow-x: hidden;
@@ -45,20 +53,23 @@
 	* {
 		box-sizing: border-box;
 		z-index: 0;
+		position: relative;
 	}
 	:root {
-		--main-font: 'Roboto', sans-serif;
+		--main-font: 'Montserrat', sans-serif;
 		--main-color: #272727;
 		--color-white: #fff;
-    --main-font-size: 18px;
-    --color-pink: #e07e94;
+		--main-font-size: 18px;
+		--color-pink: #ee0683;
+		--color-neon: #77fdf0;
+		--color-blue: #4ed9f9;
 	}
 	#wrapper {
-    &[data-scroll='1'] {
-			#logo {
-				visibility: hidden;
-			}
-		}
+		// &[data-scroll='1'] {
+		// 	#logo {
+		// 		visibility: hidden;
+		// 	}
+		// }
 	}
 	img {
 		display: block;
@@ -131,7 +142,7 @@
 	//grid
 	section,
 	footer {
-		padding: 4em 0;
+		padding: 5em 0;
 	}
 	.section__content {
 		width: 100%;
@@ -241,8 +252,206 @@
 	}
 	.grid__col._lg_12 {
 		width: 100%;
-  }
-  h1 {
-    font-size: 40px;
-  }
+	}
+
+	.text {
+		&-blue {
+			color: var(--color-blue) !important;
+		}
+		&-neon {
+			color: var(--color-neon);
+    }
+    &-pink {
+      color: var(--color-pink);
+    }
+	}
+	//90
+	h1 {
+		font-size: 90px;
+	}
+	h2 {
+		font-size: 50px;
+	}
+	//47
+	h3 {
+		font-size: 47px;
+	}
+	//33
+	.title {
+		line-height: 1;
+		&._lg {
+			font-size: 33px;
+		}
+		&._md {
+      font-size: 24px;
+      line-height: 32px;
+		}
+	}
+	.feedback {
+		height: 44px;
+		width: 190px;
+		border: 3px solid #4ed9f9 !important;
+		border-radius: 60px;
+		background: none;
+		color: var(--color-neon) !important;
+
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:before {
+				content: '';
+				display: block;
+				width: 6px;
+				height: 6px;
+				background: var(--color-pink);
+				border-radius: 50%;
+				flex-shrink: 0;
+				margin-right: 10px;
+			}
+		}
+
+		&:hover {
+			background: none;
+		}
+	}
+	.animation {
+		opacity: 0;
+		animation-fill-mode: both !important;
+	}
+
+	section {
+		&._visible {
+			.animation {
+				&._type {
+					&_fadeIn {
+						animation-name: fadeIn;
+					}
+
+					&_slideInUp {
+						animation-name: fadeIn, slideUp_1x;
+
+						&-2x {
+							animation-name: fadeIn, slideUp_2x;
+						}
+					}
+
+					&_slideInDown {
+						animation-name: fadeIn, slideDown_1x;
+
+						&-2x {
+							animation-name: fadeIn, slideDown_2x;
+						}
+					}
+
+					&_slideInLeft {
+						animation-name: fadeIn, slideLeft_1x;
+
+						&-2x {
+							animation-name: fadeIn, slideLeft_2x;
+						}
+					}
+
+					&_slideInRight {
+						animation-name: fadeIn, slideRight_1x;
+
+						&-2x {
+							animation-name: fadeIn, slideRight_2x;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadeOut {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+
+	@keyframes slideUp_1x {
+		from {
+			transform: translateY(15px);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes slideUp_2x {
+		from {
+			transform: translateY(30px);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes slideDown_1x {
+		from {
+			transform: translateY(-15px);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes slideDown_2x {
+		from {
+			transform: translateY(-30px);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes slideLeft_1x {
+		from {
+			transform: translateX(-15px);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes slideLeft_2x {
+		from {
+			transform: translateX(-30px);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes slideRight_1x {
+		from {
+			transform: translateX(15px);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes slideRight_2x {
+		from {
+			transform: translateX(30px);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
 </style>

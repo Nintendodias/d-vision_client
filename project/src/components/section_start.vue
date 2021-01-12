@@ -4,6 +4,7 @@
 			<div class="item-bg" data-bg="1"></div>
 			<div class="item-bg" data-bg="2"></div>
 			<div class="item-bg" data-bg="3"></div>
+			<div class="item-bg" data-bg="4"></div>
 			<div class="rainbow-line" data-rainbow="1"></div>
 			<div class="rainbow-line" data-rainbow="2"></div>
 			<div class="rainbow-line" data-rainbow="3"></div>
@@ -15,13 +16,21 @@
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
 						<img class="items-center" src="../assets/logo_d-vision_lg.png" alt="" />
-						<h1 class="text-white text-center">
-							Мы знаем, что делает фарма
-						</h1>
+						<h2 class="text-white text-center">
+							<span class='text-blue'>Мы знаем,</span> что делает фарма
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="section__content">
+				<div class="grid__row _lg_content_center">
+					<div class="grid__col _lg_1">
+						<button id="next"></button>
 					</div>
 				</div>
 			</div>
 		</div>
+		<img src="../assets/bg_line.png" alt="" id="line">
 	</section>
 </template>
 
@@ -40,7 +49,7 @@
 		methods: {
 			animateSectionStart: function(event) {
 				let count = event.clientX / 40;
-				this.gradient = `linear-gradient(${134.41 - count}deg, #e07e94 -5.96%,#2f0078 16.04%,#2f0078 45.53%,#2f0078 77.82%,#451ab2 100%)`;
+				this.gradient = `linear-gradient(${134.41 - count}deg, #E07E94 1%,#D97993 3%,#AC598C 5%, #863E86 7%, #662781 10%, #4E167D, #3D0A7A, #320279, #2F0078, #30037C, #310A88, #34189D, #382AB9, #3D41DE, #4256FE)`;
 			},
 		},
 	};
@@ -52,9 +61,38 @@
 		min-height: 100vh;
 		display: flex;
 		align-items: center;
-		background: #fff;
+		background: none;
+		padding-top: 10em;
+		padding-bottom: 5em;
+
 		img {
 			margin-bottom: 2em;
+		}
+		#line {
+			position: absolute;
+			bottom: -2em;
+			left: 0;
+			width: 100%;
+		}
+		#next {
+			background: var(--color-white);
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+			border-radius: 60px;
+			height: 78px;
+			width: 80%;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+
+			&:after {
+				content: '';
+				width: 17px;
+				height: 8px;
+				background: url(../assets/arrow.png) center / contain no-repeat;
+				transform: rotate(90deg);
+			}
 		}
 		#container_bg {
 			position: absolute;
@@ -66,14 +104,13 @@
 
 			.rainbow-line {
 				position: absolute;
-				width: 1px;
-				background: linear-gradient(to top, var(--color-white), transparent);
-				box-shadow: 0 0 5px var(--color-white);
+				width: 4px;
+				background: linear-gradient(to top, #F6DF0B, #AA2ECC, #B925BC, #E10E92, #F7017A);
 				opacity: .5;
 				transform: rotate(45deg);
 				animation: rainbow 1s 3s infinite both;
 				animation-name: rainbow;
-				animation-duration: 3s;
+				animation-duration: 5s;
 				animation-iteration-count: infinite;
 				animation-fill-mode: both;
 
@@ -119,7 +156,7 @@
 			}
 			.item-bg {
 				position: absolute;
-				width: 150px;
+				width: 144px;
 				border-radius: 80px;
 				height: 100vh;
 				background: linear-gradient(to bottom, #2f0078, #4256fe);
@@ -128,16 +165,27 @@
 				animation: animatedBlocks 2s both;
 
 				&[data-bg='1'] {
-					left: 10%;
-					top: 0;
+					left: 20%;
+					top: -350px;
+					background: linear-gradient(to top, #783484 0.01%, #2F027B 88.25%);
 				}
 				&[data-bg='2'] {
-					left: 40%;
-					top: 150px;
+					left: 20%;
+					top: 50px;
+					background: linear-gradient(180deg, #350479 0%, #2F0179 100%);
+					box-shadow: 0px 60px 60px rgba(29, 22, 74, 0.59);
 				}
 				&[data-bg='3'] {
-					right: 0;
+					right: 20%;
 					top: -100px;
+					background: linear-gradient(180deg, #30037C 0%, #3E159F 100%);
+					box-shadow: 0px 50px 60px #200661;
+				}
+				&[data-bg='4'] {
+					right: 20%;
+					top: 250px;
+					background: linear-gradient(180deg, #4F1DA4 41.15%, #3545DC 100%);
+					box-shadow: 0px 50px 60px #200661;
 				}
 				@keyframes animatedBlocks {
 					0% {
