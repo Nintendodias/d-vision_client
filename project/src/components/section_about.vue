@@ -3098,8 +3098,6 @@
 </template>
 
 <script>
-	let test = 0;
-
 	export default {
 		name: 'section_about',
 		props: {
@@ -3124,6 +3122,7 @@
 			let isDone = false;
 
 			window.addEventListener('scroll', (e) => {
+				console.log(e)
 				let sectionTopPosition = this.checkSectionPosition(section);
 				let now = window.scrollY;
 
