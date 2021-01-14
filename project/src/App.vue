@@ -4,6 +4,8 @@
 		<section_start />
 		<section_about />
 		<section_wedo />
+		<section_analytic />
+		<section_pr />
 	</div>
 </template>
 
@@ -20,7 +22,9 @@
 	import section_menu from './components/section_menu.vue';
 	import section_start from './components/section_start.vue';
   import section_about from './components/section_about.vue';
-  import section_wedo from './components/section_wedo.vue';
+	import section_wedo from './components/section_wedo.vue';
+	import section_analytic from './components/section_analytic.vue';
+	import section_pr from './components/section_pr.vue';
 
 	export default {
 		name: 'App',
@@ -29,6 +33,8 @@
 			section_start,
 			section_about,
 			section_wedo,
+			section_analytic,
+			section_pr,
 		},
 	};
 </script>
@@ -275,6 +281,12 @@
 	//47
 	h3 {
 		font-size: 47px;
+	}
+	.number {
+		font-size: 40px;
+	}
+	#digital {
+		font-size: 61px;
 	}
 	//33
 	.title {

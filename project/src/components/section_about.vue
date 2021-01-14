@@ -3029,9 +3029,8 @@
 					</div>
 					<div class="grid__col _lg_7">
 						<p class="title _lg text-white"><span class="text-blue">Кто</span> мы?</p>
-						<div
-							class="section__content animation _type_slideInLeft"
-							data-duration="1"
+						<div 
+							class="section__content animation _type_slideInLeft" data-duration="1"
 							data-delay="1"
 						>
 							<div class="grid__row">
@@ -3137,7 +3136,7 @@
 						}
 						isDone = false;
 						if (parseInt(getComputedStyle(timeline).strokeDashoffset) <= 2544) {
-							timeline.style.strokeDashoffset = `${timelineStartPosition + i * 12}`;
+							timeline.style.strokeDashoffset = `${timelineStartPosition + i * 20}`;
 						}
 					} else {
 						j++;
@@ -3148,7 +3147,7 @@
 						}
 						isDone = true;
 						svg.style.transform = `translateY(${startSVGPosition - j * 3}px)`;
-						timeline.style.strokeDashoffset = `${timelineStartPosition - j * 12}`;
+						timeline.style.strokeDashoffset = `${timelineStartPosition - j * 20}`;
 					}
 					currentScrollTop = now;
 				}
