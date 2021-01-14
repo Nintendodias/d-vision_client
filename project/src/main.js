@@ -15,12 +15,12 @@ window.addEventListener('load', () => {
               if (!isIntersecting) {
                   return;
               }
-
+              console.log(target)
               target.classList.add('_visible');
           });
       },
       {
-          threshold: 0.5,
+          threshold: 0.4,
       },
   );
   const sections = document.querySelectorAll('section');

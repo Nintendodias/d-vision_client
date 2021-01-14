@@ -3120,8 +3120,7 @@
 			let startSVGPosition;
 			let isDone = false;
 
-			window.addEventListener('scroll', (e) => {
-				console.log(e)
+			window.addEventListener('scroll', () => {
 				let sectionTopPosition = this.checkSectionPosition(section);
 				let now = window.scrollY;
 

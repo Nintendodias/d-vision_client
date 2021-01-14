@@ -6,6 +6,7 @@
 		<section_wedo />
 		<section_analytic />
 		<section_pr />
+		<section_digitalSchool />
 	</div>
 </template>
 
@@ -25,6 +26,7 @@
 	import section_wedo from './components/section_wedo.vue';
 	import section_analytic from './components/section_analytic.vue';
 	import section_pr from './components/section_pr.vue';
+	import section_digitalSchool from './components/section_digitalSchool.vue';
 
 	export default {
 		name: 'App',
@@ -35,6 +37,7 @@
 			section_wedo,
 			section_analytic,
 			section_pr,
+			section_digitalSchool,
 		},
 	};
 </script>
@@ -51,7 +54,7 @@
 		font-style: normal;
 		font-size: var(--main-font-size);
 		line-height: 1.666;
-		background: linear-gradient(180deg, #191355 0%, #371365 100%);
+		background: url(assets/bg_bottom.png) center bottom /contain no-repeat, linear-gradient(180deg, #191355 0%, #371365 100%);
 	}
 	body {
 		overflow-x: hidden;
@@ -269,7 +272,25 @@
     }
     &-pink {
       color: var(--color-pink);
-    }
+		}
+		&-digital-blue {
+			color: #4696F5;
+		}
+		&-digital-green {
+			color: #36A7C0;
+		}
+		&-digital-violet {
+			color: #A01DC1;
+		}
+	}
+	ul {
+		padding-left: 20px;
+	}
+	.line {
+		width: 100%;
+		height: 1px;
+		background: #4696F5;
+		margin: 2em 0;
 	}
 	//90
 	h1 {
@@ -277,6 +298,9 @@
 	}
 	h2 {
 		font-size: 50px;
+	}
+	h3 {
+		font-size: 60px;
 	}
 	//47
 	h3 {
