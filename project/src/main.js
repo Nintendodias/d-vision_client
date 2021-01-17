@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
           });
       },
       {
-          threshold: 0.4,
+          threshold: 0.3,
       },
   );
   const sections = document.querySelectorAll('section');

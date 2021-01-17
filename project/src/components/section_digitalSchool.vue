@@ -398,20 +398,17 @@
 								Middle
 							</p>
 							<p class="text-margin text-white title _md">
-								Цветовой тренинг
+								Игра «Где выписка?»
 							</p>
 							<p class="text-light text-white text-margin">
-								Рассказываем о
-								<span class="text-digital-violet text-bold"
-									>цветовой типологии врачей и препаратов.</span
-								>
+								Масштабный тренинг для медицинских представителей: как общаться в мессенджерах с
+								врачами?
 							</p>
 							<p class="text-margin text-white title _md">
 								Формат:
 							</p>
 							<p class="text-light text-white text-margin">
-								<span class="text-digital-violet text-bold">Offline,</span> приезжаем к вам или
-								арендуем комфортное пространство.
+								<span class="text-digital-violet text-bold">Чат-боты</span> в telegram
 							</p>
 							<div class="section__content">
 								<div class="grid__row">
@@ -434,8 +431,8 @@
 															<ul class="text-digital-violet text-margin">
 																<li>
 																	<span class="text-white">
-																		Рассказываем о цветовой типологии, включаем практические
-																		задания.
+																		Создается индивидуальный чат-бот, ежедневно в заданное время
+																		ученики получают сообщение-задание от бота и обратную связь.
 																	</span>
 																</li>
 															</ul>
@@ -444,7 +441,9 @@
 															<ul class="text-digital-violet text-margin">
 																<li>
 																	<span class="text-white">
-																		В перерыве предлагаем перекусить и выпить вкусный кофе.
+																		Все обучение проходит в формате квеста. В конце обучения
+																		определяются 3 лучших ученика, которые получают призы. Подходит
+																		для большого количества учеников.
 																	</span>
 																</li>
 															</ul>
@@ -471,8 +470,8 @@
 														<div class="grid__col _lg_12">
 															<ul class="text-digital-violet text-margin">
 																<li>
-																	5 часов
-																	<span class="text-white">(включая перерыв на 40 мин)</span>
+																	<span class="text-digital-violet text-bold">От 2х до 3х</span>
+																	недель
 																</li>
 															</ul>
 														</div>
@@ -490,7 +489,144 @@
 							:active="tab === 3"
 							data-duration="0.5"
 							data-delay="0.1"
-						></div>
+						>
+							<p class="number text-digital-green text-margin text-bold">
+								High
+							</p>
+							<div class="section__content">
+								<div class="grid__row">
+									<div class="grid__col _lg_6">
+										<p class="text-margin text-white title _md">
+											DCJM
+										</p>
+										<p class="text-light text-white text-margin similar-height" >
+											Составляем подробную карту портретов и каналов коммуникаций с целевой
+											аудиторией.
+										</p>
+										<p class="text-margin text-white title _md">
+											Формат:
+										</p>
+										<p class="text-light text-white text-margin">
+											<span class="text-digital-green text-bold">Offline,</span> приезжаем к вам в
+											любой день.
+										</p>
+										<div class="section__content">
+											<div class="grid__row">
+												<div class="grid__col _lg_12">
+													<div class="item-down">
+														<p
+															class="text-digital-green text-bold text-margin"
+															style="line-height: 1"
+														>
+															Как проходит?
+														</p>
+														<span
+															class="button-toggle"
+															:class="visible ? null : 'collapsed'"
+															:aria-expanded="visible ? 'true' : 'false'"
+															aria-controls="collapse-4"
+															@click="visible = !visible"
+														></span>
+														<b-collapse id="collapse-4" v-model="visible" class="mt-2">
+															<div class="section__content">
+																<ul class="text-digital-green text-margin">
+																	<li>
+																		<span class="text-white">
+																			Рассказываем в режиме интенсива, что такое DCJM, как с этим работать и для чего необходимо составлять  карты, в интенсив включаем практические задания. 
+																		</span>
+																	</li>
+																</ul>
+															</div>
+														</b-collapse>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="grid__col _lg_6">
+										<p class="text-margin text-white title _md">
+											Подключись к Digital
+										</p>
+										<p class="text-light text-white text-margin similar-height">
+											Тренинг для product-менеджеров, включающий структурное обучение digital, с учетом стратегии планирования по препаратам
+										</p>
+										<p class="text-margin text-white title _md">
+											Формат:
+										</p>
+										<p class="text-light text-white text-margin">
+											<span class="text-digital-green text-bold">Online тренинг</span> с подключение мессенджеров
+										</p>
+										<div class="section__content">
+											<div class="grid__row">
+												<div class="grid__col _lg_12">
+													<div class="item-down">
+														<p
+															class="text-digital-green text-bold text-margin"
+															style="line-height: 1"
+														>
+															Как проходит?
+														</p>
+														<span
+															class="button-toggle"
+															:class="visible2 ? null : 'collapsed'"
+															:aria-expanded="visible2 ? 'true' : 'false'"
+															aria-controls="collapse-4"
+															@click="visible2 = !visible2"
+														></span>
+														<b-collapse id="collapse-4" v-model="visible2" class="mt-2">
+															<div class="section__content">
+																<div class="grid__row">
+																	<div class="grid__col _lg_12">
+																		<ul class="text-digital-green text-margin">
+																			<li>
+																				<span class="text-white">
+																					Индивидуальные группы в мессенджерах с обратной связью от куратора, получение заданий в виде коротких видеороликов и инфографики, отработка домашних заданий.
+																				</span>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</b-collapse>
+													</div>
+													<div class="line"></div>
+													<div class="item-down">
+														<p
+															class="text-digital-green text-bold text-margin"
+															style="line-height: 1"
+														>
+															Сколько длится?
+														</p>
+														<span
+															class="button-toggle"
+															:class="visible ? null : 'collapsed'"
+															:aria-expanded="visible3 ? 'true' : 'false'"
+															aria-controls="collapse-5"
+															@click="visible3 = !visible3"
+														></span>
+														<b-collapse id="collapse-5" v-model="visible3" class="mt-2">
+															<div class="section__content">
+																<div class="grid__row">
+																	<div class="grid__col _lg_12">
+																		<ul class="text-digital-green text-margin">
+																			<li>
+																				<span class="text-digital-green text-bold"
+																					>5 дней,</span
+																				> 1 час в день
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</b-collapse>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -509,6 +645,7 @@
 				tab: 1,
 				visible: true,
 				visible2: true,
+				visible3: true,
 			};
 		},
 	};
@@ -517,7 +654,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 	.section_digitalSchool {
-		background: url(../assets/bg_clouds.png) center top 30% / contain no-repeat;
+		background: url(../assets/bg_clouds.png) center top 9% / contain no-repeat;
 
 		svg {
 			width: 100%;
@@ -574,23 +711,23 @@
 			margin-top: 2em;
 			filter: drop-shadow(0 -4px 3px var(--color-blue));
 
-			&[data-item="digital_1"] {
+			&[data-item='digital_1'] {
 				&:after {
 					background: url(../assets/i.png) center no-repeat, #4696f5;
 				}
 			}
-			&[data-item="digital_3"] {
+			&[data-item='digital_3'] {
 				&:after {
-					background: url(../assets/ii.png) center no-repeat, #36A7C0;
+					background: url(../assets/ii.png) center no-repeat, #36a7c0;
 				}
 			}
-			&[data-item="digital_2"] {
+			&[data-item='digital_2'] {
 				&:after {
-					background: url(../assets/iii.png) center no-repeat, #A01DC1;
+					background: url(../assets/iii.png) center no-repeat, #a01dc1;
 				}
 			}
 			&:after {
-				content: ''; 
+				content: '';
 				position: absolute;
 				top: 20px;
 				right: 20px;
@@ -648,6 +785,9 @@
 					transition: 0.5s;
 				}
 			}
+		}
+		.similar-height {
+			min-height: 5em;
 		}
 	}
 </style>

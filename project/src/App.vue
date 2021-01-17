@@ -4,9 +4,11 @@
 		<section_start />
 		<section_about />
 		<section_wedo />
+		<section_slider />
 		<section_analytic />
 		<section_pr />
 		<section_digitalSchool />
+		<section_footer />
 	</div>
 </template>
 
@@ -27,6 +29,8 @@
 	import section_analytic from './components/section_analytic.vue';
 	import section_pr from './components/section_pr.vue';
 	import section_digitalSchool from './components/section_digitalSchool.vue';
+	import section_footer from './components/section_footer.vue';
+	import section_slider from './components/section_slider.vue';
 
 	export default {
 		name: 'App',
@@ -35,9 +39,11 @@
 			section_start,
 			section_about,
 			section_wedo,
+			section_slider,
 			section_analytic,
 			section_pr,
 			section_digitalSchool,
+			section_footer,
 		},
 	};
 </script>
@@ -54,7 +60,7 @@
 		font-style: normal;
 		font-size: var(--main-font-size);
 		line-height: 1.666;
-		background: url(assets/bg_bottom.png) center bottom /contain no-repeat, linear-gradient(180deg, #191355 0%, #371365 100%);
+		background: linear-gradient(180deg, #191355 0%, #371365 100%);
 	}
 	body {
 		overflow-x: hidden;
@@ -317,6 +323,7 @@
 		line-height: 1;
 		&._lg {
 			font-size: 33px;
+			line-heigh: 43px;
 		}
 		&._md {
       font-size: 24px;
