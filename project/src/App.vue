@@ -1,13 +1,7 @@
 <template>
-	<div id="wrapper" data-scroll="1">
+	<div id="wrapper">
 		<section_menu @changeTab='onChangeTab' />
-		<section_start />
-		<section_about />
-		<section_wedo />
-		<section_slider />
-		<section_analytic />
-		<section_pr />
-		<section_digitalSchool :digitalTab='digitalTab' />
+		<page_main :digitalTab='digitalTab'/>
 		<section_footer />
 	</div>
 </template>
@@ -23,36 +17,23 @@
 	Vue.use(BootstrapVueIcons);
 
 	import section_menu from './components/section_menu.vue';
-	import section_start from './components/section_start.vue';
-  import section_about from './components/section_about.vue';
-	import section_wedo from './components/section_wedo.vue';
-	import section_analytic from './components/section_analytic.vue';
-	import section_pr from './components/section_pr.vue';
-	import section_digitalSchool from './components/section_digitalSchool.vue';
+	import page_main from './pages/page_main.vue';
 	import section_footer from './components/section_footer.vue';
-	import section_slider from './components/section_slider.vue';
 
 	export default {
 		name: 'App',
 		components: {
 			section_menu,
-			section_start,
-			section_about,
-			section_wedo,
-			section_slider,
-			section_analytic,
-			section_pr,
-			section_digitalSchool,
+			page_main,
 			section_footer,
 		},
 		data() {
 			return {
-				digitalTab: 3
+				digitalTab: 1
 			}
 		},
 		methods: {
 			onChangeTab (data) {
-				console.log(data.digitalTab)
 				this.digitalTab = data.digitalTab;
 			}
 		}
