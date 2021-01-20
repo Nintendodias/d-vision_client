@@ -1,6 +1,15 @@
 <template>
 	<section class="section_slider">
-		<carousel id="carousel" :dots='false' :nav="false" :center='true' :responsive="{0:{items:1},600:{items:3,nav:true}}" :autoplaySpeed='20' :margin="40" class="animation _type_slideInRight" data-duration="1"
+		<div class="grid">
+			<div class="section__content">
+				<div class="grid__row">
+					<div class="grid__col _lg_12">
+						<h3 class="text-white"><span class="text-blue">Недавние</span> работы</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<carousel id="carousel" :dots='true' :nav="false" :center='true' :responsive="{0:{items:1},600:{items:3,nav:true}}" :margin="40" class="animation _type_slideInRight" data-duration="1"
 							data-delay="1">
 			<div class="slider__item">
 				<img src="../assets/slider_1.png" alt="" />
@@ -36,17 +45,6 @@
 				</div>
 			</div>
 			<div class="slider__item">
-				<img src="../assets/slider_5.png" alt="" />
-				<div class="slider__text">
-					<p class="title _md text-margin text-white">
-						Видео контент
-					</p>
-					<p class="text-white text-margin">
-						3D анимация, съемки KOL, скетч-ролики
-					</p>
-				</div>
-			</div>
-			<div class="slider__item">
 				<img src="../assets/slider_4.png" alt="" />
 				<div class="slider__text">
 					<p class="title _md text-margin text-white">
@@ -58,6 +56,17 @@
 				</div>
 			</div>
 			<div class="slider__item">
+				<img src="../assets/slider_5.png" alt="" />
+				<div class="slider__text">
+					<p class="title _md text-margin text-white">
+						Видео контент
+					</p>
+					<p class="text-white text-margin">
+						3D анимация, съемки KOL, скетч-ролики
+					</p>
+				</div>
+			</div>
+			<div class="slider__item" v-scroll-to="'.section_footer'">
 				<div id="slider__button">
 					<div>
 						<img src="../assets/arrow_3.png" alt="">
@@ -70,13 +79,29 @@
 					</div>
 				</div>
 			</div>
-		</carousel>
-		
+		</carousel>	
 	</section>
 </template>
 
 <script>
 	import carousel from 'vue-owl-carousel';
+	import Vue from 'vue';
+	var VueScrollTo = require('vue-scrollto');
+
+	Vue.use(VueScrollTo, {
+		container: 'body',
+		duration: 500,
+		easing: 'ease',
+		offset: 0,
+		force: true,
+		cancelable: true,
+		onStart: false,
+		onDone: false,
+		onCancel: false,
+		x: false,
+		y: true,
+	});
+
 	export default {
 		name: 'section_slider',
 		props: {
@@ -93,7 +118,44 @@
 		
 		#carousel {
 			position: relative;
+			margin-top: 3em;
 
+			.owl-dots span {
+				background: #7774EC;
+				transition: 1s;
+				box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+			}
+			.owl-dots .owl-dot.active span {
+				background: #EC409D;
+				transform: scale(1.5);
+			}
+			.owl-nav {
+				height: 38px;
+				margin-top: 2em;
+
+				.owl-prev, .owl-next {
+					color: transparent;
+					padding: 0;
+					position: absolute;
+					width: 90px;
+					height: 55.77px;
+					background: url(../assets/arrow_slider.png) center right / contain no-repeat,
+						url(../assets/arrow_slider_2.png) center right 30% no-repeat;
+					top: 0;
+					left: 50%;
+					transform: translate(-222%, -39%)
+
+				}
+				.owl-next {
+					transform: translate(222%, -39%) rotate(180deg);
+					left: auto;
+					right: 50%;
+				}
+			}
+			.owl-dots {
+				margin-top: -2em;
+				pointer-events: none;
+			}
 			#slider__button {
 				height: 275px;
 				width: 100%;
@@ -120,31 +182,10 @@
 				}
 			}
 
-			&:before, &:after {
-				content: 'Недавние работы';
-				display: inline;
-				color: var(--color-blue);
-				font-size: 90px;
-				font-weight: 600;
-				position: absolute;
-				top: 0;
-				left: 0;
-				transform: translateY(-60%)
-			}
-			&:before {
-				z-index: 100;
-			}
-			&:after {
-				z-index: 0;
-			}
 			.owl-stage div.owl-item:nth-child(2n) {
 					z-index: 200;
 			}
 
-			margin-top: -3em;
-			.owl-nav {
-				display: none !important;
-			}
 			.slider__item {
 				&>img {
 					height: 275px;

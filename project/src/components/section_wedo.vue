@@ -203,7 +203,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 	.section_wedo {
-		padding-top: 0;
+		padding-bottom: 0;
 
 		#svg-container {
 			height: 200px;
@@ -215,7 +215,7 @@
 			height: auto;
 			top: 50%;
 			left: 0;
-			transform: translate(0, -120%);
+			transform: translate(0, -73%);
 			z-index: 200;
 
 			.circle {
@@ -249,14 +249,7 @@
 						transform-origin: 1336px center;
 					}
 				}
-				&[active='true'] {
-					* {
-						fill: rgb(236, 64, 157);
-						stroke: rgb(236, 64, 157);
-						transition: 1s;
-					}
-
-					.item-circle {
+				.item-circle {
 						animation: rising 2s infinite both;
 
 						@keyframes rising {
@@ -271,12 +264,19 @@
 							}
 						}
 					}
+				&[active='true'] {
+					* {
+						fill: rgb(236, 64, 157);
+						stroke: rgb(236, 64, 157);
+						transition: 1s;
+					}
 				}
 			}
 		}
 
 		.item-switch {
 			display: none;
+			height: 280px;
 
 			&[active='true'] {
 				display: block;

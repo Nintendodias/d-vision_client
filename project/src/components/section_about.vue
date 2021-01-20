@@ -11,7 +11,7 @@
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
 							ref="svg"
-						>
+						> 
 							<g id="Group 115">
 								<path
 									id="Ellipse 53"
@@ -3124,7 +3124,7 @@
 				let sectionTopPosition = this.checkSectionPosition(section);
 				let now = window.scrollY;
 
-				if (sectionTopPosition <= 15 && sectionTopPosition >= -220) {
+				if (sectionTopPosition <= 223 && sectionTopPosition >= -220) {
 					if (now > currentScrollTop) {
 						i++;
 						j = 0;
@@ -3158,7 +3158,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 	.section_about {
-		padding-bottom: 10em;
+		padding-bottom: 3em;
+		background: url(../assets/bg_abstrakt_1.png) center left no-repeat, url(../assets/bg_abstrakt_2.png) center right no-repeat;
 		svg {
 			transform: translateY(0);
 		}
@@ -3195,6 +3196,7 @@
 			.timeline {
 				stroke-dasharray: 1272;
 				stroke-dashoffset: 1590;
+				transition: 1s;
 			}
 			.about_stages {
 				visibility: hidden;

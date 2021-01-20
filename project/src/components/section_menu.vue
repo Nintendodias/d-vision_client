@@ -10,21 +10,27 @@
 
 				<b-collapse id="nav-collapse" is-nav>
 					<b-navbar-nav class="ml-auto">
-						<b-nav-item href="#" :active="tab === 1" @click="tab = 1">Кейсы</b-nav-item>
+						<b-nav-item href="#">Кейсы</b-nav-item>
 
 						<b-nav-item-dropdown text="О нас" right>
-							<b-dropdown-item href="#">Наши возможности</b-dropdown-item>
-							<b-dropdown-item href="#">Стратегический продакшн</b-dropdown-item>
-							<b-dropdown-item href="#">PR</b-dropdown-item>
+							<b-dropdown-item href="#" v-scroll-to="'.section_wedo'">Наши возможности</b-dropdown-item>
+							<b-dropdown-item href="#" v-scroll-to="'.section_slider'">Стратегический продакшн</b-dropdown-item>
+							<b-dropdown-item href="#" v-scroll-to="'.section_pr'">PR</b-dropdown-item>
 						</b-nav-item-dropdown>
 
 						<b-nav-item-dropdown text="Digital школа для фармы" right>
-							<b-dropdown-item href="#">test_1</b-dropdown-item>
-							<b-dropdown-item href="#">test_2</b-dropdown-item>
-							<b-dropdown-item href="#">test_3</b-dropdown-item>
+							<b-dropdown-item href="#"  @click="tab = 1, changeTab()" v-scroll-to="'#digital_container'">Grade</b-dropdown-item>
+							<b-dropdown-item href="#"  @click="tab = 2, changeTab()" v-scroll-to="'#digital_container'">Middle</b-dropdown-item>
+							<b-dropdown-item href="#" @click="tab = 3, changeTab()" v-scroll-to="'#digital_container'">High</b-dropdown-item>
 						</b-nav-item-dropdown>
 
-						<b-button size="sm" class="my-2 my-sm-0 feedback" type="submit"><span>Связаться с нами</span></b-button>
+						<b-button
+							v-scroll-to="'.section_footer'"
+							size="sm"
+							class="my-2 my-sm-0 feedback"
+							type="submit"
+							><span>Связаться с нами</span></b-button
+						>
 					</b-navbar-nav>
 				</b-collapse>
 			</b-navbar>
@@ -33,6 +39,23 @@
 </template>
 
 <script>
+	import Vue from 'vue';
+	var VueScrollTo = require('vue-scrollto');
+
+	Vue.use(VueScrollTo, {
+		container: 'body',
+		duration: 500,
+		easing: 'ease',
+		offset: 0,
+		force: true,
+		cancelable: true,
+		onStart: false,
+		onDone: false,
+		onCancel: false,
+		x: false,
+		y: true,
+	});
+	
 	export default {
 		name: 'section_menu',
 		props: {
@@ -42,6 +65,13 @@
 			return {
 				tab: 1,
 			};
+		},
+		methods: {
+			changeTab () {
+				this.$emit('changeTab', {
+					digitalTab: this.tab
+				})
+			}
 		}
 	};
 </script>
@@ -55,7 +85,14 @@
 		background: none;
 		margin: 0;
 		z-index: 50;
-		background: linear-gradient(90.01deg, rgba(40, 12, 89, 0.7) 70%, rgba(40, 12, 89, 0.8) 85%, rgba(40, 12, 89, 0.9) 90%, rgba(40, 12, 89, 0.8) 85%, rgba(33, 19, 89, 0.7) 70%);
+		background: linear-gradient(
+			90.01deg,
+			rgba(40, 12, 89, 0.7) 70%,
+			rgba(40, 12, 89, 0.8) 85%,
+			rgba(40, 12, 89, 0.9) 90%,
+			rgba(40, 12, 89, 0.8) 85%,
+			rgba(33, 19, 89, 0.7) 70%
+		);
 
 		* {
 			z-index: 100;
@@ -77,24 +114,24 @@
 		}
 
 		.dropdown {
-
 			&:focus {
 				border: none !important;
 			}
 			&.show {
 				.dropdown-toggle::after {
-					transform: rotate(180deg);	
+					transform: rotate(180deg);
 				}
 			}
 		}
-		
+
 		.dropdown-menu {
 			background: rgba(40, 12, 89, 0.8);
 			backdrop-filter: blur(10px);
 			padding: 0;
 			min-width: 18rem;
 
-			.dropdown-item:hover, .dropdown-item:focus {
+			.dropdown-item:hover,
+			.dropdown-item:focus {
 				background: none;
 			}
 
@@ -104,6 +141,7 @@
 
 				a {
 					padding: 0.2em 1em;
+					background: none !important;
 				}
 
 				&:after {

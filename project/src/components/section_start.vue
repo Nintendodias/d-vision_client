@@ -25,7 +25,7 @@
 			<div class="section__content">
 				<div class="grid__row _lg_content_center">
 					<div class="grid__col _lg_1">
-						<button id="next"></button>
+						<button v-scroll-to="'.section_about'" id="next"></button>
 					</div>
 				</div>
 			</div>
@@ -35,6 +35,22 @@
 </template>
 
 <script>
+	import Vue from 'vue';
+	var VueScrollTo = require('vue-scrollto');
+
+	Vue.use(VueScrollTo, {
+		container: 'body',
+		duration: 500,
+		easing: 'ease',
+		offset: 0,
+		force: true,
+		cancelable: true,
+		onStart: false,
+		onDone: false,
+		onCancel: false,
+		x: false,
+		y: true,
+	});
 	export default {
 		name: 'section_start',
 		props: {

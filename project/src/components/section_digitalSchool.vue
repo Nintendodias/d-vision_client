@@ -26,7 +26,7 @@
 							xmlns="http://www.w3.org/2000/svg"
 						>
 							<g id="Group 116">
-								<g class="wing" :active="tab === 1" @click="tab = 1" id="grade">
+								<g class="wing" :active="digitalTab === 1" @click="digitalTab = 1" id="grade">
 									<g class="fill" id="fill">
 										<path
 											d="M428.041 65H25.3946L2 90.0405H380.546L428.041 65Z"
@@ -132,7 +132,7 @@
 										/>
 									</g>
 								</g>
-								<g class="wing" :active="tab === 2" @click="tab = 2" id="middle">
+								<g class="wing" :active="digitalTab === 2" @click="digitalTab = 2" id="middle">
 									<g class="fill" id="fill_2">
 										<path
 											d="M666.959 65H1069.61L1093 90.0405H714.454L666.959 65Z"
@@ -253,7 +253,7 @@
 										/>
 									</g>
 								</g>
-								<g class="wing" :active="tab === 3" @click="tab = 3" id="middle_2">
+								<g class="wing" :active="digitalTab === 3" @click="digitalTab = 3" id="middle_2">
 									<path
 										class="fill"
 										id="fill_3"
@@ -290,335 +290,337 @@
 			<div class="section__content">
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
-						<div
-							class="item-title animation _type_slideInDown"
-							data-item="digital_1"
-							:active="tab === 1"
-							data-duration="0.5"
-							data-delay="1"
-						>
-							<p class="number text-digital-blue text-margin text-bold">
-								Grade
-							</p>
-							<p class="text-margin text-white title _md">
-								Цветовой тренинг
-							</p>
-							<p class="text-light text-white text-margin">
-								Рассказываем о
-								<span class="text-digital-blue text-bold"
-									>цветовой типологии врачей и препаратов.</span
-								>
-							</p>
-							<p class="text-margin text-white title _md">
-								Формат:
-							</p>
-							<p class="text-light text-white text-margin">
-								<span class="text-digital-blue text-bold">Offline,</span> приезжаем к вам или
-								арендуем комфортное пространство.
-							</p>
-							<div class="section__content">
-								<div class="grid__row">
-									<div class="grid__col _lg_12">
-										<div class="item-down">
-											<p class="text-digital-blue text-bold text-margin" style="line-height: 1">
-												Как проходит?
-											</p>
-											<span
-												class="button-toggle"
-												:class="visible ? null : 'collapsed'"
-												:aria-expanded="visible ? 'true' : 'false'"
-												aria-controls="collapse-4"
-												@click="visible = !visible"
-											></span>
-											<b-collapse id="collapse-4" v-model="visible" class="mt-2">
-												<div class="section__content">
-													<div class="grid__row">
-														<div class="grid__col _lg_6">
-															<ul class="text-digital-blue text-margin">
-																<li>
-																	<span class="text-white">
-																		Рассказываем о цветовой типологии, включаем практические
-																		задания.
-																	</span>
-																</li>
-															</ul>
-														</div>
-														<div class="grid__col _lg_6">
-															<ul class="text-digital-blue text-margin">
-																<li>
-																	<span class="text-white">
-																		В перерыве предлагаем перекусить и выпить вкусный кофе.
-																	</span>
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</b-collapse>
-										</div>
-										<div class="line"></div>
-										<div class="item-down">
-											<p class="text-digital-blue text-bold text-margin" style="line-height: 1">
-												Сколько длится?
-											</p>
-											<span
-												class="button-toggle"
-												:class="visible ? null : 'collapsed'"
-												:aria-expanded="visible2 ? 'true' : 'false'"
-												aria-controls="collapse-5"
-												@click="visible2 = !visible2"
-											></span>
-											<b-collapse id="collapse-5" v-model="visible2" class="mt-2">
-												<div class="section__content">
-													<div class="grid__row">
-														<div class="grid__col _lg_12">
-															<ul class="text-digital-blue text-margin">
-																<li>
-																	5 часов
-																	<span class="text-white">(включая перерыв на 40 мин)</span>
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</b-collapse>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div
-							class="item-title animation _type_slideInDown"
-							data-item="digital_2"
-							:active="tab === 2"
-							data-duration="0.5"
-							data-delay="1"
-						>
-							<p class="number text-digital-violet text-margin text-bold">
-								Middle
-							</p>
-							<p class="text-margin text-white title _md">
-								Игра «Где выписка?»
-							</p>
-							<p class="text-light text-white text-margin">
-								Масштабный тренинг для медицинских представителей: как общаться в мессенджерах с
-								врачами?
-							</p>
-							<p class="text-margin text-white title _md">
-								Формат:
-							</p>
-							<p class="text-light text-white text-margin">
-								<span class="text-digital-violet text-bold">Чат-боты</span> в telegram
-							</p>
-							<div class="section__content">
-								<div class="grid__row">
-									<div class="grid__col _lg_12">
-										<div class="item-down">
-											<p class="text-digital-violet text-bold text-margin" style="line-height: 1">
-												Как проходит?
-											</p>
-											<span
-												class="button-toggle"
-												:class="visible ? null : 'collapsed'"
-												:aria-expanded="visible ? 'true' : 'false'"
-												aria-controls="collapse-4"
-												@click="visible = !visible"
-											></span>
-											<b-collapse id="collapse-4" v-model="visible" class="mt-2">
-												<div class="section__content">
-													<div class="grid__row">
-														<div class="grid__col _lg_6">
-															<ul class="text-digital-violet text-margin">
-																<li>
-																	<span class="text-white">
-																		Создается индивидуальный чат-бот, ежедневно в заданное время
-																		ученики получают сообщение-задание от бота и обратную связь.
-																	</span>
-																</li>
-															</ul>
-														</div>
-														<div class="grid__col _lg_6">
-															<ul class="text-digital-violet text-margin">
-																<li>
-																	<span class="text-white">
-																		Все обучение проходит в формате квеста. В конце обучения
-																		определяются 3 лучших ученика, которые получают призы. Подходит
-																		для большого количества учеников.
-																	</span>
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</b-collapse>
-										</div>
-										<div class="line"></div>
-										<div class="item-down">
-											<p class="text-digital-violet text-bold text-margin" style="line-height: 1">
-												Сколько длится?
-											</p>
-											<span
-												class="button-toggle"
-												:class="visible ? null : 'collapsed'"
-												:aria-expanded="visible2 ? 'true' : 'false'"
-												aria-controls="collapse-5"
-												@click="visible2 = !visible2"
-											></span>
-											<b-collapse id="collapse-5" v-model="visible2" class="mt-2">
-												<div class="section__content">
-													<div class="grid__row">
-														<div class="grid__col _lg_12">
-															<ul class="text-digital-violet text-margin">
-																<li>
-																	<span class="text-digital-violet text-bold">От 2х до 3х</span>
-																	недель
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</b-collapse>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div
-							class="item-title animation _type_slideInDown"
-							data-item="digital_3"
-							:active="tab === 3"
-							data-duration="0.5"
-							data-delay="0.1"
-						>
-							<p class="number text-digital-green text-margin text-bold">
-								High
-							</p>
-							<div class="section__content">
-								<div class="grid__row">
-									<div class="grid__col _lg_6">
-										<p class="text-margin text-white title _md">
-											DCJM
-										</p>
-										<p class="text-light text-white text-margin similar-height" >
-											Составляем подробную карту портретов и каналов коммуникаций с целевой
-											аудиторией.
-										</p>
-										<p class="text-margin text-white title _md">
-											Формат:
-										</p>
-										<p class="text-light text-white text-margin">
-											<span class="text-digital-green text-bold">Offline,</span> приезжаем к вам в
-											любой день.
-										</p>
-										<div class="section__content">
-											<div class="grid__row">
-												<div class="grid__col _lg_12">
-													<div class="item-down">
-														<p
-															class="text-digital-green text-bold text-margin"
-															style="line-height: 1"
-														>
-															Как проходит?
-														</p>
-														<span
-															class="button-toggle"
-															:class="visible ? null : 'collapsed'"
-															:aria-expanded="visible ? 'true' : 'false'"
-															aria-controls="collapse-4"
-															@click="visible = !visible"
-														></span>
-														<b-collapse id="collapse-4" v-model="visible" class="mt-2">
-															<div class="section__content">
-																<ul class="text-digital-green text-margin">
+						<div id="digital_container">
+							<div
+								class="item-title animation _type_slideInDown"
+								data-item="digital_1"
+								data-duration="0.5"
+								data-delay="1"
+								v-if='digitalTab === 1'
+							>
+								<p class="number text-digital-blue text-margin text-bold">
+									Grade
+								</p>
+								<p class="text-margin text-white title _md">
+									Цветовой тренинг
+								</p>
+								<p class="text-light text-white text-margin">
+									Рассказываем о
+									<span class="text-digital-blue text-bold"
+										>цветовой типологии врачей и препаратов.</span
+									>
+								</p>
+								<p class="text-margin text-white title _md">
+									Формат:
+								</p>
+								<p class="text-light text-white text-margin">
+									<span class="text-digital-blue text-bold">Offline,</span> приезжаем к вам или
+									арендуем комфортное пространство.
+								</p>
+								<div class="section__content">
+									<div class="grid__row">
+										<div class="grid__col _lg_12">
+											<div class="item-down">
+												<p class="text-digital-blue text-bold text-margin" style="line-height: 1">
+													Как проходит?
+												</p>
+												<span
+													class="button-toggle"
+													:class="visible ? null : 'collapsed'"
+													:aria-expanded="visible ? 'true' : 'false'"
+													aria-controls="collapse-4"
+													@click="visible = !visible"
+												></span>
+												<b-collapse id="collapse-4" v-model="visible" class="mt-2">
+													<div class="section__content">
+														<div class="grid__row">
+															<div class="grid__col _lg_6">
+																<ul class="text-digital-blue text-margin">
 																	<li>
 																		<span class="text-white">
-																			Рассказываем в режиме интенсива, что такое DCJM, как с этим работать и для чего необходимо составлять  карты, в интенсив включаем практические задания. 
+																			Рассказываем о цветовой типологии, включаем практические
+																			задания.
 																		</span>
 																	</li>
 																</ul>
 															</div>
-														</b-collapse>
+															<div class="grid__col _lg_6">
+																<ul class="text-digital-blue text-margin">
+																	<li>
+																		<span class="text-white">
+																			В перерыве предлагаем перекусить и выпить вкусный кофе.
+																		</span>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</b-collapse>
+											</div>
+											<div class="line"></div>
+											<div class="item-down">
+												<p class="text-digital-blue text-bold text-margin" style="line-height: 1">
+													Сколько длится?
+												</p>
+												<span
+													class="button-toggle"
+													:class="visible ? null : 'collapsed'"
+													:aria-expanded="visible2 ? 'true' : 'false'"
+													aria-controls="collapse-5"
+													@click="visible2 = !visible2"
+												></span>
+												<b-collapse id="collapse-5" v-model="visible2" class="mt-2">
+													<div class="section__content">
+														<div class="grid__row">
+															<div class="grid__col _lg_12">
+																<ul class="text-digital-blue text-margin">
+																	<li>
+																		5 часов
+																		<span class="text-white">(включая перерыв на 40 мин)</span>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</b-collapse>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div
+								class="item-title animation _type_slideInDown"
+								data-item="digital_2"
+								data-duration="0.5"
+								data-delay="1"
+								v-if='digitalTab === 2'
+							>
+								<p class="number text-digital-violet text-margin text-bold">
+									Middle
+								</p>
+								<p class="text-margin text-white title _md">
+									Игра «Где выписка?»
+								</p>
+								<p class="text-light text-white text-margin">
+									Масштабный тренинг для медицинских представителей: как общаться в мессенджерах с
+									врачами?
+								</p>
+								<p class="text-margin text-white title _md">
+									Формат:
+								</p>
+								<p class="text-light text-white text-margin">
+									<span class="text-digital-violet text-bold">Чат-боты</span> в telegram
+								</p>
+								<div class="section__content">
+									<div class="grid__row">
+										<div class="grid__col _lg_12">
+											<div class="item-down">
+												<p class="text-digital-violet text-bold text-margin" style="line-height: 1">
+													Как проходит?
+												</p>
+												<span
+													class="button-toggle"
+													:class="visible ? null : 'collapsed'"
+													:aria-expanded="visible ? 'true' : 'false'"
+													aria-controls="collapse-4"
+													@click="visible = !visible"
+												></span>
+												<b-collapse id="collapse-4" v-model="visible" class="mt-2">
+													<div class="section__content">
+														<div class="grid__row">
+															<div class="grid__col _lg_6">
+																<ul class="text-digital-violet text-margin">
+																	<li>
+																		<span class="text-white">
+																			Создается индивидуальный чат-бот, ежедневно в заданное время
+																			ученики получают сообщение-задание от бота и обратную связь.
+																		</span>
+																	</li>
+																</ul>
+															</div>
+															<div class="grid__col _lg_6">
+																<ul class="text-digital-violet text-margin">
+																	<li>
+																		<span class="text-white">
+																			Все обучение проходит в формате квеста. В конце обучения
+																			определяются 3 лучших ученика, которые получают призы. Подходит
+																			для большого количества учеников.
+																		</span>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</b-collapse>
+											</div>
+											<div class="line"></div>
+											<div class="item-down">
+												<p class="text-digital-violet text-bold text-margin" style="line-height: 1">
+													Сколько длится?
+												</p>
+												<span
+													class="button-toggle"
+													:class="visible ? null : 'collapsed'"
+													:aria-expanded="visible2 ? 'true' : 'false'"
+													aria-controls="collapse-5"
+													@click="visible2 = !visible2"
+												></span>
+												<b-collapse id="collapse-5" v-model="visible2" class="mt-2">
+													<div class="section__content">
+														<div class="grid__row">
+															<div class="grid__col _lg_12">
+																<ul class="text-digital-violet text-margin">
+																	<li>
+																		<span class="text-digital-violet text-bold">От 2х до 3х</span>
+																		недель
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</b-collapse>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div
+								class="item-title animation _type_slideInDown"
+								data-item="digital_3"
+								data-duration="0.5"
+								data-delay="0.1"
+								v-if='digitalTab === 3'
+							>
+								<p class="number text-digital-green text-margin text-bold">
+									High
+								</p>
+								<div class="section__content">
+									<div class="grid__row">
+										<div class="grid__col _lg_6">
+											<p class="text-margin text-white title _md">
+												DCJM
+											</p>
+											<p class="text-light text-white text-margin similar-height" >
+												Составляем подробную карту портретов и каналов коммуникаций с целевой
+												аудиторией.
+											</p>
+											<p class="text-margin text-white title _md">
+												Формат:
+											</p>
+											<p class="text-light text-white text-margin">
+												<span class="text-digital-green text-bold">Offline,</span> приезжаем к вам в
+												любой день.
+											</p>
+											<div class="section__content">
+												<div class="grid__row">
+													<div class="grid__col _lg_12">
+														<div class="item-down">
+															<p
+																class="text-digital-green text-bold text-margin"
+																style="line-height: 1"
+															>
+																Как проходит?
+															</p>
+															<span
+																class="button-toggle"
+																:class="visible ? null : 'collapsed'"
+																:aria-expanded="visible ? 'true' : 'false'"
+																aria-controls="collapse-4"
+																@click="visible = !visible"
+															></span>
+															<b-collapse id="collapse-4" v-model="visible" class="mt-2">
+																<div class="section__content">
+																	<ul class="text-digital-green text-margin">
+																		<li>
+																			<span class="text-white">
+																				Рассказываем в режиме интенсива, что такое DCJM, как с этим работать и для чего необходимо составлять  карты, в интенсив включаем практические задания. 
+																			</span>
+																		</li>
+																	</ul>
+																</div>
+															</b-collapse>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="grid__col _lg_6">
-										<p class="text-margin text-white title _md">
-											Подключись к Digital
-										</p>
-										<p class="text-light text-white text-margin similar-height">
-											Тренинг для product-менеджеров, включающий структурное обучение digital, с учетом стратегии планирования по препаратам
-										</p>
-										<p class="text-margin text-white title _md">
-											Формат:
-										</p>
-										<p class="text-light text-white text-margin">
-											<span class="text-digital-green text-bold">Online тренинг</span> с подключение мессенджеров
-										</p>
-										<div class="section__content">
-											<div class="grid__row">
-												<div class="grid__col _lg_12">
-													<div class="item-down">
-														<p
-															class="text-digital-green text-bold text-margin"
-															style="line-height: 1"
-														>
-															Как проходит?
-														</p>
-														<span
-															class="button-toggle"
-															:class="visible2 ? null : 'collapsed'"
-															:aria-expanded="visible2 ? 'true' : 'false'"
-															aria-controls="collapse-4"
-															@click="visible2 = !visible2"
-														></span>
-														<b-collapse id="collapse-4" v-model="visible2" class="mt-2">
-															<div class="section__content">
-																<div class="grid__row">
-																	<div class="grid__col _lg_12">
-																		<ul class="text-digital-green text-margin">
-																			<li>
-																				<span class="text-white">
-																					Индивидуальные группы в мессенджерах с обратной связью от куратора, получение заданий в виде коротких видеороликов и инфографики, отработка домашних заданий.
-																				</span>
-																			</li>
-																		</ul>
+										<div class="grid__col _lg_6">
+											<p class="text-margin text-white title _md">
+												Подключись к Digital
+											</p>
+											<p class="text-light text-white text-margin similar-height">
+												Тренинг для product-менеджеров, включающий структурное обучение digital, с учетом стратегии планирования по препаратам
+											</p>
+											<p class="text-margin text-white title _md">
+												Формат:
+											</p>
+											<p class="text-light text-white text-margin">
+												<span class="text-digital-green text-bold">Online тренинг</span> с подключение мессенджеров
+											</p>
+											<div class="section__content">
+												<div class="grid__row">
+													<div class="grid__col _lg_12">
+														<div class="item-down">
+															<p
+																class="text-digital-green text-bold text-margin"
+																style="line-height: 1"
+															>
+																Как проходит?
+															</p>
+															<span
+																class="button-toggle"
+																:class="visible2 ? null : 'collapsed'"
+																:aria-expanded="visible2 ? 'true' : 'false'"
+																aria-controls="collapse-4"
+																@click="visible2 = !visible2"
+															></span>
+															<b-collapse id="collapse-4" v-model="visible2" class="mt-2">
+																<div class="section__content">
+																	<div class="grid__row">
+																		<div class="grid__col _lg_12">
+																			<ul class="text-digital-green text-margin">
+																				<li>
+																					<span class="text-white">
+																						Индивидуальные группы в мессенджерах с обратной связью от куратора, получение заданий в виде коротких видеороликов и инфографики, отработка домашних заданий.
+																					</span>
+																				</li>
+																			</ul>
+																		</div>
 																	</div>
 																</div>
-															</div>
-														</b-collapse>
-													</div>
-													<div class="line"></div>
-													<div class="item-down">
-														<p
-															class="text-digital-green text-bold text-margin"
-															style="line-height: 1"
-														>
-															Сколько длится?
-														</p>
-														<span
-															class="button-toggle"
-															:class="visible ? null : 'collapsed'"
-															:aria-expanded="visible3 ? 'true' : 'false'"
-															aria-controls="collapse-5"
-															@click="visible3 = !visible3"
-														></span>
-														<b-collapse id="collapse-5" v-model="visible3" class="mt-2">
-															<div class="section__content">
-																<div class="grid__row">
-																	<div class="grid__col _lg_12">
-																		<ul class="text-digital-green text-margin">
-																			<li>
-																				<span class="text-digital-green text-bold"
-																					>5 дней,</span
-																				> 1 час в день
-																			</li>
-																		</ul>
+															</b-collapse>
+														</div>
+														<div class="line"></div>
+														<div class="item-down">
+															<p
+																class="text-digital-green text-bold text-margin"
+																style="line-height: 1"
+															>
+																Сколько длится?
+															</p>
+															<span
+																class="button-toggle"
+																:class="visible ? null : 'collapsed'"
+																:aria-expanded="visible3 ? 'true' : 'false'"
+																aria-controls="collapse-5"
+																@click="visible3 = !visible3"
+															></span>
+															<b-collapse id="collapse-5" v-model="visible3" class="mt-2">
+																<div class="section__content">
+																	<div class="grid__row">
+																		<div class="grid__col _lg_12">
+																			<ul class="text-digital-green text-margin">
+																				<li>
+																					<span class="text-digital-green text-bold"
+																						>5 дней,</span
+																					> 1 час в день
+																				</li>
+																			</ul>
+																		</div>
 																	</div>
 																</div>
-															</div>
-														</b-collapse>
+															</b-collapse>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -637,12 +639,9 @@
 <script>
 	export default {
 		name: 'section_digitalSchool',
-		props: {
-			msg: String,
-		},
+		props: ['digitalTab'],
 		data() {
 			return {
-				tab: 1,
 				visible: true,
 				visible2: true,
 				visible3: true,
@@ -703,7 +702,7 @@
 		}
 
 		.item-title {
-			display: none;
+			display: block;
 			position: relative;
 			width: 100%;
 			padding: 2em 1em;
@@ -753,10 +752,6 @@
 			}
 			&[data-item='digital_2']:before {
 				right: 15%;
-			}
-
-			&[active='true'] {
-				display: block;
 			}
 		}
 		.item-down {

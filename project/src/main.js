@@ -15,7 +15,6 @@ window.addEventListener('load', () => {
               if (!isIntersecting) {
                   return;
               }
-              console.log(target)
               target.classList.add('_visible');
           });
       },
