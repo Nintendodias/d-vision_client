@@ -2,6 +2,7 @@
 	<div id="wrapper">
 		<section_menu @changeTab='onChangeTab' />
 		<page_main :digitalTab='digitalTab'/>
+		<page_projects />
 		<section_footer />
 	</div>
 </template>
@@ -18,6 +19,7 @@
 
 	import section_menu from './components/section_menu.vue';
 	import page_main from './pages/page_main.vue';
+	import page_projects from './pages/page_projects.vue';
 	import section_footer from './components/section_footer.vue';
 
 	export default {
@@ -25,6 +27,7 @@
 		components: {
 			section_menu,
 			page_main,
+			page_projects,
 			section_footer,
 		},
 		data() {
