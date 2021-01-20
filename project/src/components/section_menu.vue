@@ -10,13 +10,15 @@
 
 				<b-collapse id="nav-collapse" is-nav>
 					<b-navbar-nav class="ml-auto">
-						<b-nav-item href="#">Кейсы</b-nav-item>
-
+						<b-nav-item href="#"><router-link to='/projects'>Кейсы</router-link></b-nav-item>
+						
+						
 						<b-nav-item-dropdown text="О нас" right>
-							<b-dropdown-item href="#" v-scroll-to="'.section_wedo'">Наши возможности</b-dropdown-item>
-							<b-dropdown-item href="#" v-scroll-to="'.section_slider'">Стратегический продакшн</b-dropdown-item>
-							<b-dropdown-item href="#" v-scroll-to="'.section_pr'">PR</b-dropdown-item>
+							<b-dropdown-item href="#" v-scroll-to="'.section_wedo'"><router-link to='/'>Наши возможности</router-link></b-dropdown-item>
+							<b-dropdown-item href="#" v-scroll-to="'.section_slider'"><router-link to='/'>Стратегический продакшн</router-link></b-dropdown-item>
+							<b-dropdown-item href="#" v-scroll-to="'.section_pr'"><router-link to='/'>PR</router-link></b-dropdown-item>
 						</b-nav-item-dropdown>
+						
 
 						<b-nav-item-dropdown text="Digital школа для фармы" right>
 							<b-dropdown-item href="#"  @click="tab = 1, changeTab()" v-scroll-to="'#digital_container'">Grade</b-dropdown-item>
