@@ -35,29 +35,10 @@ new Vue({
 
 window.addEventListener('load', () => {
     document.body.classList.add('_load');
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(({
-                isIntersecting,
-                target
-            }) => {
-                if (!isIntersecting) {
-                    return;
-                }
-                target.classList.add('_visible');
-            });
-        }, {
-            threshold: 0.3,
-        },
-    );
-    const sections = document.querySelectorAll('section');
-
-    sections.forEach((section) => observer.observe(section));
 });
 
 window.addEventListener('load', function () {
     var $animations = document.querySelectorAll('.animation');
-    console.log($animations)
 
     $animations.forEach(function ($animation) {
         var _$animation$dataset = $animation.dataset,
