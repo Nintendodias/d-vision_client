@@ -21,7 +21,7 @@
 						
 
 						<b-nav-item-dropdown text="Digital школа для фармы" right>
-							<b-dropdown-item href="#"  @click="tab = 1, changeTab()" v-scroll-to="'#digital_container'"><router-link to='/'>GradeБ</router-link></b-dropdown-item>
+							<b-dropdown-item href="#"  @click="tab = 1, changeTab()" v-scroll-to="'#digital_container'"><router-link to='/'>Grade</router-link></b-dropdown-item>
 							<b-dropdown-item href="#"  @click="tab = 2, changeTab()" v-scroll-to="'#digital_container'"><router-link to='/'>Middle</router-link></b-dropdown-item>
 							<b-dropdown-item href="#" @click="tab = 3, changeTab()" v-scroll-to="'#digital_container'"><router-link to='/'>High</router-link></b-dropdown-item>
 						</b-nav-item-dropdown>

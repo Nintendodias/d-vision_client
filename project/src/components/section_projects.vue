@@ -17,9 +17,9 @@
 					</div>
 					<div class="grid__col _lg_7">
 						<div class="wrap_container">
-							<img src="../assets/dnr.svg" @click="onFilterPlayground('dnr')" alt="" class="wrap_item">
-							<img src="../assets/bionicaMedia.svg" @click="onFilterPlayground('bionica')" alt="" class="wrap_item">
-							<img src="../assets/book.svg" @click="onFilterPlayground('book')" alt="" class="wrap_item">
+							<img src="../assets/dnr.svg" alt="" class="wrap_item">
+							<img src="../assets/bionicaMedia.svg" alt="" class="wrap_item">
+							<img src="../assets/book.svg" alt="" class="wrap_item">
 						</div>
 					</div>
 				</div>
@@ -33,12 +33,12 @@
 					</div>
 					<div class="grid__col _lg_10">
 						<div class="wrap_container">
-							<a href="#" class="wrap_item">Неврологи</a>
-							<a href="#" class="wrap_item">Кардиологи</a>
-							<a href="#" class="wrap_item">Терапевты</a>
-							<a href="#" class="wrap_item">Онкологи</a>
-							<a href="#" class="wrap_item">Гинекологи</a>
-							<a href="#" class="wrap_item">Потребители</a>
+							<a href="#" @click='onFilterSpecialty' class="wrap_item">Неврологи</a>
+							<a href="#" data-specialty="" @click='onFilterSpecialty' class="wrap_item">Кардиологи</a>
+							<a href="#" data-specialty="" @click='onFilterSpecialty' class="wrap_item">Терапевты</a>
+							<a href="#" data-specialty="" @click='onFilterSpecialty' class="wrap_item">Онкологи</a>
+							<a href="#" data-specialty="" @click='onFilterSpecialty' class="wrap_item">Гинекологи</a>
+							<a href="#" data-specialty="" @click='onFilterSpecialty' class="wrap_item">Потребители</a>
 						</div>
 					</div>
 				</div>
@@ -66,7 +66,8 @@
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
 						<div class="projects_container">
-							<a :href="project.link" class="projects_item" v-for="project in projects" :key="project.name">
+							<a :href="project.link" target="_blank" class="projects_item" v-for="(project, index) in projects" :key="index">
+								<img :src="project.img" alt="">
 								<p class="title _md text-white text-semi text-margin">
 									{{project.name}}
 								</p>
@@ -83,6 +84,7 @@
 </template>
 
 <script>
+	import projects from "../js/projects";
 	export default {
 		name: 'section_projects',
 		props: {
@@ -90,42 +92,12 @@
 		},
 		data() {
 			return {
-				projects: [
-					{
-						playground: 'dnr',
-						specialty: 'Терапевты',
-						nosology: 'Климакс',
-						img: 'project_1.png',
-						name: 'Целебрекс',
-						description: 'Интерактивная программа',
-						link: '#test_1'
-					},
-					{
-						playground: 'bionica',
-						specialty: 'Неврологи',
-						nosology: 'НПВС',
-						img: 'project_2.png',
-						name: 'Аэртал',
-						description: 'Видеоролик',
-						link: '#test_2'
-					},
-					{
-						playground: 'book',
-						specialty: 'Гинекологи',
-						nosology: 'ХСН',
-						img: 'project_3.png',
-						name: 'Китруда',
-						description: 'Лендинги, баннерные форматы',
-						link: '#test_3'
-					},
-				],
+				projects
 			};
 		},
 		methods: {
-			onFilterPlayground(type) {
-				this.projects.forEach(project => console.log(project.playground == type));
-				console.log(type)
-				console.log(this.projects.filter(project => project.playground == type));
+			onFilterSpecialty() {
+				console.log('asd')
 			}
 		}
 	};
@@ -141,7 +113,6 @@
 			flex-wrap: wrap;
 
 			.wrap_item {
-				cursor: pointer;
 				&+.wrap_item {
 					margin-left: 1em;
 				}
@@ -166,17 +137,20 @@
 		}
 		.projects_container {
 			display: flex;
-			align-items: center;
-			justify-content: flex-start;
+			align-items: flex-start;
+			justify-content: space-between;
 			flex-wrap: wrap;
 
 			.projects_item {
-				background: black;
 				width: 350px;
 				cursor: pointer;
+				margin-bottom: 2em;
 
-				&+.projects_item {
-					margin-left: 1em;
+				&>img {
+					width: 350px;
+					height: 330px;
+					object-fit: cover;
+					margin-bottom: 1em;
 				}
 			}
 		}
