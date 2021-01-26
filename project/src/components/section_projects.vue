@@ -32,14 +32,9 @@
 						</p>
 					</div>
 					<div class="grid__col _lg_10">
-						<div class="wrap_container">
-							<a href="#" @click='onFilterSpecialty' class="wrap_item">Неврологи</a>
-							<a href="#" data-specialty="" @click='onFilterSpecialty' class="wrap_item">Кардиологи</a>
-							<a href="#" data-specialty="" @click='onFilterSpecialty' class="wrap_item">Терапевты</a>
-							<a href="#" data-specialty="" @click='onFilterSpecialty' class="wrap_item">Онкологи</a>
-							<a href="#" data-specialty="" @click='onFilterSpecialty' class="wrap_item">Гинекологи</a>
-							<a href="#" data-specialty="" @click='onFilterSpecialty' class="wrap_item">Потребители</a>
-						</div>
+						<form action="#" class="wrap_container">
+							<input type="button" v-for="specialty in specialties" :key="specialty.id" @click="currentSpetialty = specialty.name" class="wrap_item" :value="specialty.name">
+						</form>
 					</div>
 				</div>
 			</div>
@@ -52,12 +47,9 @@
 					</div>
 					<div class="grid__col _lg_10">
 						<div class="wrap_container">
-							<a href="#" class="wrap_item">ХСН</a>
-							<a href="#" class="wrap_item">НПВС</a>
-							<a href="#" class="wrap_item">Невроз</a>
-							<a href="#" class="wrap_item">Вульвовагинальный кандидоз</a>
-							<a href="#" class="wrap_item">Климакс</a>
-							<a href="#" class="wrap_item">КОК</a>
+							<form action="#" class="wrap_container">
+								<input type='button' v-for='nosology in nosologies' :key="nosology.id" href="#" @click="currentNosology = nosology.name" class="wrap_item" :value="nosology.name">
+							</form>
 						</div>
 					</div>
 				</div>
@@ -66,7 +58,7 @@
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
 						<div class="projects_container">
-							<a :href="project.link" target="_blank" class="projects_item" v-for="(project, index) in projects" :key="index">
+							<a :href="project.link" target="_blank" class="projects_item" v-for="(project, index) in filterProjects" :key="index">
 								<img :src="project.img" alt="">
 								<p class="title _md text-white text-semi text-margin">
 									{{project.name}}
@@ -85,21 +77,38 @@
 
 <script>
 	import projects from "../js/projects";
+	import specialties from "../js/specialty";
+	import nosologies from "../js/nosology";
+
 	export default {
 		name: 'section_projects',
-		props: {
-			msg: String,
-		},
 		data() {
 			return {
-				projects
+				projects,
+				currentSpetialty: 0,
+				currentNosology: 0,
 			};
 		},
-		methods: {
-			onFilterSpecialty() {
-				console.log('asd')
+		computed: {
+			specialties() {
+				return specialties;
+			},
+			nosologies() {
+				return nosologies;
+			},
+			filterProjects() {
+				let filteredProjects = projects;
+				
+				if (this.currentSpetialty != 0) {
+					filteredProjects = filteredProjects.filter(project => project.specialty === this.currentSpetialty)
+				}
+				if (this.currentNosology != 0) {
+					filteredProjects = filteredProjects.filter(project => project.nosology === this.currentNosology)
+				}
+
+				return filteredProjects;
 			}
-		}
+		},
 	};
 </script>
 
@@ -117,7 +126,7 @@
 					margin-left: 1em;
 				}
 			}
-			a.wrap_item {
+			input.wrap_item {
 				color: #A89ED9 !important;
 				display: flex;
 				align-items: center;
@@ -128,6 +137,7 @@
 				background: #493F8B;
 				border-radius: 10px;
 				transition: .5s;
+				border: none !important;
 
 				&:hover {
 					background: #EC409D;
