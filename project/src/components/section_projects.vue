@@ -71,6 +71,7 @@
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
 						<div class="projects_container">
+							
 							<a
 								:href="project.link"
 								target="_blank"
@@ -85,6 +86,7 @@
 								<p class="text-white text-magrin">
 									{{ project.description }}
 								</p>
+
 							</a>
 						</div>
 					</div>
@@ -103,7 +105,6 @@
 		name: 'section_projects',
 		data() {
 			return {
-				projects,
 				specialtyArr: [
 					'Неврологи',
 					'Кардиологи',
@@ -124,6 +125,7 @@
 					'Гигиена',
 					'Здоровье полости рта',
 					'Витамины',
+					'Другое'
 				],
 			};
 		},
@@ -147,10 +149,12 @@
 				let value = event.target.value;
 
 				if (isActive) {
-					let index = this.specialtyArr.indexOf(value);
-					this.specialtyArr.splice(index, 1);
+					console.log('asd1')
+					let index = this.nosologyArr.indexOf(value);
+					this.nosologyArr.splice(index, 1);
 				} else {
-					this.specialtyArr.push(value)
+					console.log('asd2')
+					this.nosologyArr.push(value)
 				}
 			}
 		},
@@ -186,13 +190,12 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
-			overflow-y: hidden;
-			overflow-x: auto;
+			flex-wrap: wrap;
 
 			.wrap_item {
-				& + .wrap_item {
-					margin-left: 1em;
-				}
+				margin-right: 1em;
+				margin-bottom: .5em;
+				margin-top: .5em;
 			}
 			input.wrap_item {
 				color: #a89ed9 !important;
@@ -206,11 +209,8 @@
 				border-radius: 10px;
 				transition: 0.5s;
 				border: none !important;
+				outline: none;
 
-				&:hover {
-					background: #ec409d;
-					color: var(--color-white) !important;
-				}
 				&._active {
 					background: #ec409d;
 					color: var(--color-white) !important;

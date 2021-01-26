@@ -43,4 +43,8 @@ export default [
     id: 11,
     name: 'Витамины'
   },
+  {
+    id: 12,
+    name: 'Другое'
+  },
 ]

@@ -506,6 +506,7 @@
 	.fade-leave-active {
 		opacity: 0;
 	}
+	
 	@media (max-width: 1600px) {
 		section {
 			&.section_about,

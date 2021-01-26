@@ -81,7 +81,7 @@ const projects = [
 
   {
     playground: 'dnr',
-    specialty: 'Онкология',
+    specialty: 'Онкологи',
     nosology: 'Рак разного генома',
     img: 'https://digitvision.ru/galery/kitryda.png',
     name: 'Китруда',
@@ -132,7 +132,7 @@ const projects = [
   {
     playground: 'print',
     specialty: 'Потребители',
-    nosology: 'нет',
+    nosology: 'Другое',
     img: 'https://digitvision.ru/galery/coffe.png',
     name: 'Спецпроект с компанией Paulig',
     description: 'Книга "Кофе"',
@@ -152,7 +152,7 @@ const projects = [
   {
     playground: 'print',
     specialty: 'Потребители',
-    nosology: 'нет',
+    nosology: 'Другое',
     img: 'https://digitvision.ru/galery/nahodilki.png',
     name: 'Спецпроект с компанией Silwerhof',
     description: 'Книга "Находилки"',

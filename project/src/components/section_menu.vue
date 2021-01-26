@@ -3,7 +3,7 @@
 		<div class="grid">
 			<b-navbar toggleable="lg">
 				<b-navbar-brand href="#">
-					<img src="../assets/logo_d-vision.png" alt="" id="logo" />
+					<router-link to='/'><img src="../assets/logo_d-vision.png" alt="" id="logo" /></router-link>
 				</b-navbar-brand>
 
 				<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
