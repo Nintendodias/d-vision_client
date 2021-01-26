@@ -82,6 +82,7 @@
 	img {
 		display: block;
 		max-width: 100%;
+		user-select: none;
 	}
 	button {
 		padding: 0;
