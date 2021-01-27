@@ -64,4 +64,14 @@
 			text-align: left !important;
 		}
 	}
+	@media (max-width: 768px) {
+		.section_footer {
+			padding-top: 5em;
+			.feedback {
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
 </style>

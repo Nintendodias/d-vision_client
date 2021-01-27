@@ -195,4 +195,9 @@
 			}
 		}
 	}
+	@media (max-width: 768px) {
+		.slider__item {
+			padding: 0 1em;
+		}
+	}
 </style>

@@ -647,8 +647,18 @@
 		.grid__col._sm_0 {
 			display: none;
 		}
-		svg {
-			display: none;
+		section {
+			padding: 2em 0;
+		}
+		h2 {
+			font-size: 40px;
+		}
+		h3 {
+			font-size: 35px;
+		}
+		.title._md {
+			font-size: 20px;
+			line-height: 29px;
 		}
 	}
 </style>

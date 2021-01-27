@@ -11,7 +11,7 @@
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
 							ref="svg"
-						> 
+						>
 							<g id="Group 115">
 								<path
 									id="Ellipse 53"
@@ -3029,8 +3029,9 @@
 					</div>
 					<div class="grid__col _lg_7 _sm_12">
 						<p class="title _lg text-white"><span class="text-blue">Кто</span> мы?</p>
-						<div 
-							class="section__content animation _type_slideInLeft" data-duration="1"
+						<div
+							class="section__content animation _type_slideInLeft"
+							data-duration="1"
 							data-delay="1"
 						>
 							<div class="grid__row">
@@ -3099,9 +3100,6 @@
 <script>
 	export default {
 		name: 'section_about',
-		props: {
-			msg: String,
-		},
 		methods: {
 			checkSectionPosition(section) {
 				const sectionTopPosition = section.getBoundingClientRect().top;
@@ -3109,7 +3107,19 @@
 				return sectionTopPosition;
 			},
 		},
+		data() {
+			return {
+				isMobile: false,
+			};
+		},
 		mounted() {
+			if (
+				/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+					navigator.userAgent,
+				)
+			) {
+				this.isMobile = true;
+			}
 			const svg = this.$refs.svg;
 			const timeline = svg.querySelector('.timeline');
 			let timelineStartPosition = parseInt(getComputedStyle(timeline).strokeDashoffset);
@@ -3120,37 +3130,41 @@
 			let startSVGPosition;
 			let isDone = false;
 
-			window.addEventListener('scroll', () => {
-				let sectionTopPosition = this.checkSectionPosition(section);
-				let now = window.scrollY;
+			if (!this.isMobile) {
+				window.addEventListener('scroll', () => {
+					let sectionTopPosition = this.checkSectionPosition(section);
+					let now = window.scrollY;
 
-				if (sectionTopPosition <= 223 && sectionTopPosition >= -220) {
-					if (now > currentScrollTop) {
-						i++;
-						j = 0;
-						svg.style.transform = `translateY(${i * 3}px)`;
-						if (isDone) {
-							startSVGPosition = parseInt(getComputedStyle(svg).transform.split(',')[5]);
-							timelineStartPosition = parseInt(getComputedStyle(timeline).strokeDashoffset);
+					if (sectionTopPosition <= 223 && sectionTopPosition >= -220) {
+						if (now > currentScrollTop) {
+							i++;
+							j = 0;
+							svg.style.transform = `translateY(${i * 3}px)`;
+							if (isDone) {
+								startSVGPosition = parseInt(getComputedStyle(svg).transform.split(',')[5]);
+								timelineStartPosition = parseInt(getComputedStyle(timeline).strokeDashoffset);
+							}
+							isDone = false;
+							if (parseInt(getComputedStyle(timeline).strokeDashoffset) <= 2544) {
+								timeline.style.strokeDashoffset = `${timelineStartPosition + i * 20}`;
+							}
+						} else {
+							j++;
+							i = 0;
+							if (!isDone) {
+								startSVGPosition = parseInt(getComputedStyle(svg).transform.split(',')[5]);
+								timelineStartPosition = parseInt(getComputedStyle(timeline).strokeDashoffset);
+							}
+							isDone = true;
+							svg.style.transform = `translateY(${startSVGPosition - j * 3}px)`;
+							timeline.style.strokeDashoffset = `${timelineStartPosition - j * 20}`;
 						}
-						isDone = false;
-						if (parseInt(getComputedStyle(timeline).strokeDashoffset) <= 2544) {
-							timeline.style.strokeDashoffset = `${timelineStartPosition + i * 20}`;
-						}
-					} else {
-						j++;
-						i = 0;
-						if (!isDone) {
-							startSVGPosition = parseInt(getComputedStyle(svg).transform.split(',')[5]);
-							timelineStartPosition = parseInt(getComputedStyle(timeline).strokeDashoffset);
-						}
-						isDone = true;
-						svg.style.transform = `translateY(${startSVGPosition - j * 3}px)`;
-						timeline.style.strokeDashoffset = `${timelineStartPosition - j * 20}`;
+						currentScrollTop = now;
 					}
-					currentScrollTop = now;
-				}
-			});
+				});
+			} else {
+				timeline.style.strokeDashoffset = 1272
+			}
 		},
 	};
 </script>
@@ -3159,7 +3173,8 @@
 <style lang="less" scoped>
 	.section_about {
 		padding-bottom: 3em;
-		background: url(../assets/bg_abstrakt_1.png) center left no-repeat, url(../assets/bg_abstrakt_2.png) center right no-repeat;
+		background: url(../assets/bg_abstrakt_1.png) center left no-repeat,
+			url(../assets/bg_abstrakt_2.png) center right no-repeat;
 		svg {
 			transform: translateY(0);
 		}
@@ -3204,6 +3219,19 @@
 				&.visible {
 					visibility: visible;
 				}
+			}
+		}
+	}
+	@media (max-width: 768px) {
+		.section_about {
+			&._visible {
+				.timeline {
+					stroke-dashoffset: 2544 !important;
+				}
+			}
+			svg {
+				width: 100%;
+				translate: none !important;
 			}
 		}
 	}

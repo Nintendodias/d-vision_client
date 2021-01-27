@@ -54,7 +54,7 @@
 							data-switch="switch_02"
 						>
 							<div class="grid__row _lg_items_center">
-								<div class="grid__col _lg_8">
+								<div class="grid__col _lg_8 _sm_12">
 									<p class="title _md text-pink text-margin">
 										Дизайнеры и верстальщики
 									</p>
@@ -62,7 +62,7 @@
 										Подбираем релевантных дизайнеров на проект с учетом сложности проекта.
 									</p>
 								</div>
-								<div class="grid__col _lg_4">
+								<div class="grid__col _lg_4 _sm_12">
 									<img src="../assets/switch_2.png" alt="" />
 								</div>
 							</div>
@@ -75,7 +75,7 @@
 							data-switch="switch_03"
 						>
 							<div class="grid__row _lg_items_center">
-								<div class="grid__col _lg_8">
+								<div class="grid__col _lg_8 _sm_12">
 									<p class="title _md text-pink text-margin">
 										Сложность проектов
 									</p>
@@ -84,7 +84,7 @@
 										авторских уникальных иллюстраций
 									</p>
 								</div>
-								<div class="grid__col _lg_4">
+								<div class="grid__col _lg_4 _sm_12">
 									<img src="../assets/switch_3.png" alt="" />
 								</div>
 							</div>
@@ -99,6 +99,7 @@
 			viewBox="0 0 1920 148"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
+			v-if="!isMobile"
 		>
 			<g id="switch">
 				<path
@@ -189,14 +190,27 @@
 <script>
 	export default {
 		name: 'section_wedo',
-		props: {
-			msg: String,
-		},
 		data() {
 			return {
 				tab: 1,
+				isMobile: false
 			};
 		},
+		methods: {
+			changeRender() {
+				if (
+				/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+					navigator.userAgent,
+				)
+				) {
+					this.isMobile = true;
+				}
+				return this.isMobile;
+			}
+		},
+		mounted() {
+			this.changeRender()
+		}
 	};
 </script>
 
@@ -280,6 +294,13 @@
 
 			&[active='true'] {
 				display: block;
+			}
+		}
+	}
+	@media (max-width: 768px) {
+		.section_wedo {
+			.item-switch {
+				height: auto;
 			}
 		}
 	}

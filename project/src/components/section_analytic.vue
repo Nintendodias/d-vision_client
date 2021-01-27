@@ -123,4 +123,11 @@
 			}
 		}
 	}
+	@media (max-width: 768px) {
+		.section_analytic {
+			svg {
+				width: 100%
+			}
+		}
+	}
 </style>

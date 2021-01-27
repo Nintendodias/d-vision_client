@@ -168,4 +168,11 @@
 			}
 		}
 	}
+	@media (max-width: 768px) {
+		.section_menu {
+			.navbar-light .navbar-toggler-icon {
+				background-image: url(../assets/menu.svg)
+			}
+		}
+	}
 </style>
