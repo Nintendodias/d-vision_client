@@ -87,6 +87,7 @@
 		background: none;
 		margin: 0;
 		z-index: 50;
+		padding-left: 0;
 		background: linear-gradient(
 			90.01deg,
 			rgba(40, 12, 89, 0.7) 70%,
@@ -170,8 +171,23 @@
 	}
 	@media (max-width: 768px) {
 		.section_menu {
+			background: rgba(40, 12, 89, 1);
+
 			.navbar-light .navbar-toggler-icon {
 				background-image: url(../assets/menu.svg)
+			}
+			.navbar {
+				padding-left: 0;
+				padding-right: 0;
+
+				.nav-link {
+					padding-left: 0 !important;
+				}
+				#nav-collapse {
+					ul.navbar-nav {
+						padding: 2em 0;
+					}
+				}
 			}
 		}
 	}
