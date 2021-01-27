@@ -3028,15 +3028,16 @@
 						</svg>
 					</div>
 					<div class="grid__col _lg_7 _sm_12">
-						<p class="title _lg text-white"><span class="text-blue">Кто</span> мы?</p>
+						<p class="title _lg text-white animation _type_slideInLeft" data-duration=".5"
+							data-delay=".5"><span class="text-blue">Кто</span> мы?</p>
 						<div
 							class="section__content animation _type_slideInLeft"
-							data-duration="1"
+							data-duration=".5"
 							data-delay="1"
 						>
 							<div class="grid__row">
 								<div class="grid__col _lg_5 _sm_12">
-									<p class="text-white title _md">Команда</p>
+									<p class="text-white title _md text-pink">Команда</p>
 								</div>
 								<div class="grid__col _lg_7 _sm_12">
 									<p class="text-white">
@@ -3048,12 +3049,12 @@
 						</div>
 						<div
 							class="section__content animation _type_slideInLeft"
-							data-duration="1"
-							data-delay="2"
+							data-duration=".5"
+							data-delay="1.5"
 						>
 							<div class="grid__row">
 								<div class="grid__col _lg_5 _sm_12">
-									<p class="text-white title _md">Наши возможности</p>
+									<p class="text-white title _md text-pink">Наши возможности</p>
 								</div>
 								<div class="grid__col _lg_7 _sm_12">
 									<p class="text-white">
@@ -3065,12 +3066,12 @@
 						</div>
 						<div
 							class="section__content animation _type_slideInLeft"
-							data-duration="1"
-							data-delay="3"
+							data-duration=".5"
+							data-delay="2"
 						>
 							<div class="grid__row">
 								<div class="grid__col _lg_5 _sm_12">
-									<p class="text-white title _md">Наш опыт</p>
+									<p class="text-white title _md text-pink">Наш опыт</p>
 								</div>
 								<div class="grid__col _lg_7 _sm_12">
 									<p class="text-white">
@@ -3081,8 +3082,8 @@
 						</div>
 						<div
 							class="section__content animation _type_slideInLeft"
-							data-duration="1"
-							data-delay="4"
+							data-duration=".5"
+							data-delay="2.5"
 						>
 							<div class="grid__row">
 								<div class="grid__col _lg_12">
@@ -3224,7 +3225,7 @@
 	}
 	@media (max-width: 768px) {
 		.section_about {
-			&._visible {
+			._visible {
 				.timeline {
 					stroke-dashoffset: 2544 !important;
 				}

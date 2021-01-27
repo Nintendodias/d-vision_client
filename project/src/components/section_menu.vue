@@ -128,7 +128,7 @@
 		}
 
 		.dropdown-menu {
-			background: rgba(40, 12, 89, 0.8);
+			background: rgba(40, 12, 89, 1);
 			backdrop-filter: blur(10px);
 			padding: 0;
 			min-width: 18rem;
@@ -186,6 +186,10 @@
 				#nav-collapse {
 					ul.navbar-nav {
 						padding: 2em 0;
+
+						button {
+							width: 100%;
+						}
 					}
 				}
 			}

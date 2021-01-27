@@ -4,10 +4,10 @@
 			<div class="section__content">
 				<div class="grid__row _lg_content_center">
 					<div class="grid__col _lg_8 _sm_12">
-						<h3 class="text-center text-transform text-bold text-margin text-white">
+						<h3 class="text-center text-transform text-bold text-margin text-white animation _type_slideInDown" data-duration=".5" data-delay=".5">
 							<span class="text-blue">Digital</span> школа
 						</h3>
-						<p class="text-white text-margin text-center title _md">
+						<p class="text-white text-margin text-center title _md animation _type_slideInDown" data-duration=".5" data-delay="1">
 							Интерактивное обучение, разработанное <span class="text-blue">специально</span> для
 							работников фармацевтических компаний, с учетом понимания специфики и потребностей
 							отрасли.
@@ -24,6 +24,8 @@
 							viewBox="0 0 1095 430"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
+							class="animation _type_slideInDown"
+							data-duration=".5" data-delay=".5"
 						>
 							<g id="Group 116">
 								<g class="wing" :active="digitalTab === 1" @click="digitalTab = 1" id="grade">

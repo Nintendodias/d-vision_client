@@ -4,12 +4,15 @@
 			<div class="section__content">
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
-						<h3 class="text-margin text-white"><span class="text-blue">Что</span> мы делаем?</h3>
-						<p class="text-white title _md text-margin">
+						<h3 class="text-margin text-white animation _type_slideInLeft" data-duration=".5"
+							data-delay=".5"><span class="text-blue">Что</span> мы делаем?</h3>
+						<p class="text-white title _md text-margin animation _type_slideInLeft" data-duration=".5"
+							data-delay="1">
 							Стратегический продакшн для специалистов
 							<span class="text-blue">здравоохранения</span>
 						</p>
-						<p class="text-white text-margin text-light">
+						<p class="text-white text-margin text-light animation _type_slideInLeft" data-duration=".5"
+							data-delay="1">
 							Мы разрабатываем контент
 							<span class="text-semi"
 								>учитывая особенности нозологии и портрет целевой аудитории.</span
@@ -25,7 +28,7 @@
 						<div
 							:active="tab === 1"
 							class="item-switch animation _type_slideInDown"
-							data-duration="1"
+							data-duration=".5"
 							data-delay="0.1"
 							data-switch="switch_01"
 						>
@@ -49,7 +52,7 @@
 						<div
 							:active="tab === 2"
 							class="item-switch animation _type_slideInDown"
-							data-duration="1"
+							data-duration=".5"
 							data-delay="0.1"
 							data-switch="switch_02"
 						>
@@ -70,7 +73,7 @@
 						<div
 							:active="tab === 3"
 							class="item-switch animation _type_slideInDown"
-							data-duration="1"
+							data-duration=".5"
 							data-delay="0.1"
 							data-switch="switch_03"
 						>

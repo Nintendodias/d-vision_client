@@ -4,82 +4,98 @@
 			<div class="section__content">
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
-						<h3 class="text-white"><span class="text-blue">Недавние</span> работы</h3>
+						<h3 class="text-white animation _type_slideInLeft" data-duration=".5" data-delay="0.5">
+							<span class="text-blue">Недавние</span> работы
+						</h3>
+					</div>
+				</div>
+			</div>
+			<div class="section__content " >
+				<div class="grid__row">
+					<div class="grid__col _lg_12">
+						<carousel
+							id="carousel"
+							:dots="true"
+							:nav="false"
+							:center="true"
+							:responsive="{ 0: { items: 1 }, 600: { items: 3, nav: true } }"
+							:margin="40"
+							class="animation _type_slideInRight"
+							data-duration="1" data-delay="1"
+						>
+							<div class="slider__item">
+								<img src="../assets/slider_1.png" alt="" />
+								<div class="slider__text">
+									<p class="title _md text-margin text-white">
+										Медийные форматы
+									</p>
+									<p class="text-white text-margin">
+										Баннеры, рассылки, фулскрины
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<img src="../assets/slider_2.png" alt="" />
+								<div class="slider__text">
+									<p class="title _md text-margin text-white">
+										Сайты любой сложности
+									</p>
+									<p class="text-white text-margin">
+										От лендингов до платформ
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<img src="../assets/slider_3.png" alt="" />
+								<div class="slider__text">
+									<p class="title _md text-margin text-white">
+										CLM презентации
+									</p>
+									<p class="text-white text-margin">
+										Результативные и яркие. Простые и многоуровневые с интерактивом на приеме.
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<img src="../assets/slider_4.png" alt="" />
+								<div class="slider__text">
+									<p class="title _md text-margin text-white">
+										Чат-боты
+									</p>
+									<p class="text-white text-margin">
+										Создаем боты в мессенджерах и соцсетях
+									</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<img src="../assets/slider_5.png" alt="" />
+								<div class="slider__text">
+									<p class="title _md text-margin text-white">
+										Видео контент
+									</p>
+									<p class="text-white text-margin">
+										3D анимация, съемки KOL, скетч-ролики
+									</p>
+								</div>
+							</div>
+							<div class="slider__item" v-scroll-to="'.section_footer'">
+								<div id="slider__button">
+									<div>
+										<img src="../assets/arrow_3.png" alt="" />
+										<p class="text-white">
+											Станьте нашим клиентом и ваш проект тоже будет здесь.
+										</p>
+										<p class="text-pink text-semi">
+											Это просто.
+										</p>
+									</div>
+								</div>
+							</div>
+						</carousel>
 					</div>
 				</div>
 			</div>
 		</div>
-		<carousel id="carousel" :dots='true' :nav="false" :center='true' :responsive="{0:{items:1},600:{items:3,nav:true}}" :margin="40" class="animation _type_slideInRight" data-duration="1"
-							data-delay="1">
-			<div class="slider__item">
-				<img src="../assets/slider_1.png" alt="" />
-				<div class="slider__text">
-					<p class="title _md text-margin text-white">
-						Медийные форматы
-					</p>
-					<p class="text-white text-margin">
-						Баннеры, рассылки, фулскрины
-					</p>
-				</div>
-			</div>
-			<div class="slider__item">
-				<img src="../assets/slider_2.png" alt="" />
-				<div class="slider__text">
-					<p class="title _md text-margin text-white">
-						Сайты любой сложности
-					</p>
-					<p class="text-white text-margin">
-						От лендингов до платформ
-					</p>
-				</div>
-			</div>
-			<div class="slider__item">
-				<img src="../assets/slider_3.png" alt="" />
-				<div class="slider__text">
-					<p class="title _md text-margin text-white">
-						CLM презентации
-					</p>
-					<p class="text-white text-margin">
-						Результативные и яркие. Простые и многоуровневые с интерактивом на приеме.
-					</p>
-				</div>
-			</div>
-			<div class="slider__item">
-				<img src="../assets/slider_4.png" alt="" />
-				<div class="slider__text">
-					<p class="title _md text-margin text-white">
-						Чат-боты
-					</p>
-					<p class="text-white text-margin">
-						Создаем боты в мессенджерах и соцсетях
-					</p>
-				</div>
-			</div>
-			<div class="slider__item">
-				<img src="../assets/slider_5.png" alt="" />
-				<div class="slider__text">
-					<p class="title _md text-margin text-white">
-						Видео контент
-					</p>
-					<p class="text-white text-margin">
-						3D анимация, съемки KOL, скетч-ролики
-					</p>
-				</div>
-			</div>
-			<div class="slider__item" v-scroll-to="'.section_footer'">
-				<div id="slider__button">
-					<div>
-						<img src="../assets/arrow_3.png" alt="">
-						<p class="text-white">
-							Станьте нашим клиентом и ваш проект тоже будет здесь.
-						</p>
-						<p class="text-pink text-semi">
-							Это просто.
-						</p>
-					</div>
-				</div>
-			</div>
-		</carousel>	
 	</section>
 </template>
 
@@ -115,25 +131,25 @@
 <style lang="less">
 	.section_slider {
 		padding-bottom: 2em;
-		
+
 		#carousel {
 			position: relative;
-			margin-top: 3em;
 
 			.owl-dots span {
-				background: #7774EC;
+				background: #7774ec;
 				transition: 1s;
 				box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 			}
 			.owl-dots .owl-dot.active span {
-				background: #EC409D;
+				background: #ec409d;
 				transform: scale(1.5);
 			}
 			.owl-nav {
 				height: 38px;
 				margin-top: 2em;
 
-				.owl-prev, .owl-next {
+				.owl-prev,
+				.owl-next {
 					color: transparent;
 					padding: 0;
 					position: absolute;
@@ -143,8 +159,7 @@
 						url(../assets/arrow_slider_2.png) center right 30% no-repeat;
 					top: 0;
 					left: 50%;
-					transform: translate(-222%, -39%)
-
+					transform: translate(-222%, -39%);
 				}
 				.owl-next {
 					transform: translate(222%, -39%) rotate(180deg);
@@ -159,7 +174,7 @@
 			#slider__button {
 				height: 275px;
 				width: 100%;
-				background: #200E50;
+				background: #200e50;
 				transition: 1s;
 				display: flex;
 				align-items: center;
@@ -177,17 +192,17 @@
 
 					p:nth-child(2) {
 						transition: 1s;
-						color: #36A7C0 !important;
+						color: #36a7c0 !important;
 					}
 				}
 			}
 
 			.owl-stage div.owl-item:nth-child(2n) {
-					z-index: 200;
+				z-index: 200;
 			}
 
 			.slider__item {
-				&>img {
+				& > img {
 					height: 275px;
 					object-fit: cover;
 					margin-bottom: 1em;
@@ -196,8 +211,9 @@
 		}
 	}
 	@media (max-width: 768px) {
-		.slider__item {
-			padding: 0 1em;
+		
+		.owl-dots {
+			margin-top: 1em !important;
 		}
 	}
 </style>

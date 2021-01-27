@@ -25,7 +25,7 @@
 			<div class="section__content">
 				<div class="grid__row _lg_content_center">
 					<div class="grid__col _lg_1 _sm_3">
-						<button v-scroll-to="'.section_about'" id="next"></button>
+						<button v-scroll-to="'.section_about'" class="animation _type_slideInDown" id="next" data-duration="1" data-delay="2"></button>
 					</div>
 				</div>
 			</div>

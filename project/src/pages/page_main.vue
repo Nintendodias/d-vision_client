@@ -45,7 +45,7 @@
 					threshold: 0.3,
 				},
 			);
-			const sections = document.querySelectorAll('section');
+			const sections = document.querySelectorAll('.section__content');
 
 			sections.forEach((section) => observer.observe(section));
 		},

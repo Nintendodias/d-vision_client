@@ -47,7 +47,8 @@
 				</div>
 			</div>
 		</div>
-		<svg
+		<div class="section__content" id="svg">
+			<svg
 			width="1499"
 			height="264"
 			viewBox="0 0 1499 264"
@@ -1595,6 +1596,7 @@
 				</linearGradient>
 			</defs>
 		</svg>
+		</div>
 	</section>
 </template>
 
@@ -1614,12 +1616,16 @@
 		#svg-container {
 			height: 180px;
 		}
-		svg {
+		#svg {
 			position: absolute;
 			top: 50%;
 			right: 0;
 			transform: translate(0, -23%);
 			width: 95%;
+
+			svg {
+				width: 100%
+			}
 		}
 	}
 </style>

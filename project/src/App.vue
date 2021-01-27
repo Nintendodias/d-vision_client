@@ -271,7 +271,7 @@
 			color: var(--color-neon);
 		}
 		&-pink {
-			color: var(--color-pink);
+			color: var(--color-pink) !important;
 		}
 		&-digital-blue {
 			color: #4696f5;
@@ -358,7 +358,7 @@
 		animation-fill-mode: both !important;
 	}
 
-	section {
+	.section__content {
 		&._visible {
 			.animation {
 				&._type {

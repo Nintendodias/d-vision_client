@@ -4,7 +4,7 @@
 			<div class="section__content">
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
-						<p class="title _lg text-blue text-bold">
+						<p class="title _lg text-blue text-bold animation _type_slideInLeft" data-duration=".5" data-delay=".5">
 							Хотите узнать, <br>как мы работаем?
 						</p>
 					</div>
@@ -13,16 +13,16 @@
 			<div class="section__content">
 				<div class="grid__row _lg_items_center">
 					<div class="grid__col _lg_2 _sm_12">
-						<a href="tel:+79167270601" class="text-white text-center text-content">+7 916 727 06 01</a>
+						<a href="tel:+79167270601" class="text-white text-center text-content animation _type_slideInLeft" data-duration=".5" data-delay=".5">+7 916 727 06 01</a>
 					</div>	
 					<div class="grid__col _lg_2 _sm_12">
-						<a href="tel:+79689363069" class="text-white text-center">+7 968 936 30 69</a>
+						<a href="tel:+79689363069" class="text-white text-center animation _type_slideInLeft" data-duration=".5" data-delay="1">+7 968 936 30 69</a>
 					</div>
 					<div class="grid__col _lg_3 _sm_12">
-						<a href="mailto:info@digitvision.ru" class="text-white text-center">info@digitvision.ru</a>
+						<a href="mailto:info@digitvision.ru" class="text-white text-center animation _type_slideInLeft" data-duration=".5" data-delay="1.5">info@digitvision.ru</a>
 					</div>
 					<div class="grid__col _lg_5 _sm_12">
-						<button class="text-neon feedback"><span>Оставить запрос в telegram-боте</span></button>
+						<button class="text-neon feedback animation _type_slideInUp" data-duration=".5" data-delay="2"><span>Оставить запрос в telegram-боте</span></button>
 					</div>
 				</div>
 			</div>

@@ -1,32 +1,35 @@
 <template>
 	<section class="section_analytic">
 		<div class="grid">
-			<div class="section__content">
+			<div class="section__content" >
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
-						<p class="title _lg text-white">
+						<p class="title _lg text-white animation _type_slideInLeft" data-duration=".5" data-delay="0.5">
 							<span class="text-blue">Настройка аналитики</span> на проекте
 							<span class="text-pink">в 2 счета</span>
 						</p>
 					</div>
 				</div>
 			</div>
-			<div class="section__content">
+			<div class="section__content" >
 				<div class="grid__row _lg_items_center">
 					<div class="grid__col _lg_8 _sm_12">
-						<p class="text-white text-light">
+						<p class="text-white text-light animation _type_slideInLeft" data-duration=".5"
+							data-delay=".5">
 							Мы можем подключить <span class="text-semi"> Google Analytics</span> на любой
 							web-проект и <span class="text-semi">настроить метрики,</span> которые необходимо
 							отслеживать
 						</p>
 					</div>
 					<div class="grid__col _lg_4 _sm_12">
-						<img src="../assets/ga.png" alt="" />
+						<img src="../assets/ga.png" class="animation _type_slideInLeft" data-duration=".5"
+							data-delay="1" alt="" />
 					</div>
 				</div>
 			</div>
-			<div class="section__content">
-				<div class="grid__row _lg_items_center">
+			<div class="section__content" >
+				<div class="grid__row _lg_items_center animation _type_slideInLeft" data-duration=".5"
+							data-delay=".5">
 					<div class="grid__col _lg_6 _sm_12">
 						<div class="item-title">
 							<h1 class="text-blue text-bold">1 <span class="number text-transform">этап</span></h1>
@@ -62,7 +65,7 @@
 			/>
 		</svg></div>
 			<div class="section__content">
-				<div class="grid__row _lg_items_center _sm_reverse_col">
+				<div class="grid__row _lg_items_center _sm_reverse_col animation _type_slideInLeft" data-duration=".5" data-delay=".5">
 					<div class="grid__col _lg_6 _sm_12">
 						<img src="../assets/analytic_2.png" alt="" />
 					</div>
