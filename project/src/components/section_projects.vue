@@ -240,4 +240,9 @@
 			}
 		}
 	}
+	@media (max-width: 768px) {
+		.section_projects {
+			padding-top: 5em;
+		}
+	}
 </style>

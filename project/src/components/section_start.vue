@@ -15,8 +15,8 @@
 			<div class="section__content">
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
-						<img class="items-center" src="../assets/logo_d-vision_lg.png" alt="" />
-						<h2 class="text-white text-center">
+						<img class="items-center animation _type_fadeIn" data-duration="1" data-delay=".1" src="../assets/logo_d-vision_lg.png" alt="" />
+						<h2 class="text-white text-center animation _type_slideInDown" data-duration="1" data-delay=".5">
 							<span class='text-blue'>Мы знаем,</span> что делает фарма
 						</h2>
 					</div>

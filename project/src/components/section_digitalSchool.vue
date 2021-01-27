@@ -25,10 +25,10 @@
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
 							class="animation _type_slideInDown"
-							data-duration=".5" data-delay=".5"
+							data-duration=".5" data-delay="1"
 						>
 							<g id="Group 116">
-								<g class="wing" :active="digitalTab === 1" @click="digitalTab = 1" id="grade">
+								<g class="wing" v-scroll-to="'#digital_container'" :active="digitalTab === 1" @click="digitalTab = 1" id="grade">
 									<g class="fill" id="fill">
 										<path
 											d="M428.041 65H25.3946L2 90.0405H380.546L428.041 65Z"
@@ -134,7 +134,7 @@
 										/>
 									</g>
 								</g>
-								<g class="wing" :active="digitalTab === 2" @click="digitalTab = 2" id="middle">
+								<g class="wing" v-scroll-to="'#digital_container'" :active="digitalTab === 2" @click="digitalTab = 2" id="middle">
 									<g class="fill" id="fill_2">
 										<path
 											d="M666.959 65H1069.61L1093 90.0405H714.454L666.959 65Z"
@@ -255,7 +255,7 @@
 										/>
 									</g>
 								</g>
-								<g class="wing" :active="digitalTab === 3" @click="digitalTab = 3" id="middle_2">
+								<g class="wing" v-scroll-to="'#digital_container'" :active="digitalTab === 3" @click="digitalTab = 3" id="middle_2">
 									<path
 										class="fill"
 										id="fill_3"
@@ -786,6 +786,30 @@
 		}
 		.similar-height {
 			min-height: 5em;
+		}
+	}
+	@media (max-width: 768px) {
+		.section_digitalSchool {
+			background-position: center top 4%;
+
+			.number {
+				font-size: 30px;
+			}
+			.item-title {
+				&:after {
+					width: 40px;
+					height: 40px;
+				}
+				&[data-item='digital_1']:after {
+					background-size: 30% !important;
+				}
+				&[data-item='digital_3']:after {
+					background-size: 56% !important;
+				}
+				&[data-item='digital_2']:after {
+					background-size: 73% !important;
+				}
+			}
 		}
 	}
 </style>
