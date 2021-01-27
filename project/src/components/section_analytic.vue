@@ -13,21 +13,21 @@
 			</div>
 			<div class="section__content">
 				<div class="grid__row _lg_items_center">
-					<div class="grid__col _lg_8">
+					<div class="grid__col _lg_8 _sm_12">
 						<p class="text-white text-light">
 							Мы можем подключить <span class="text-semi"> Google Analytics</span> на любой
 							web-проект и <span class="text-semi">настроить метрики,</span> которые необходимо
 							отслеживать
 						</p>
 					</div>
-					<div class="grid__col _lg_4">
+					<div class="grid__col _lg_4 _sm_12">
 						<img src="../assets/ga.png" alt="" />
 					</div>
 				</div>
 			</div>
 			<div class="section__content">
 				<div class="grid__row _lg_items_center">
-					<div class="grid__col _lg_6">
+					<div class="grid__col _lg_6 _sm_12">
 						<div class="item-title">
 							<h1 class="text-blue text-bold">1 <span class="number text-transform">этап</span></h1>
 							<p class="text-margin text-white title _md">
@@ -39,7 +39,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="grid__col _lg_6">
+					<div class="grid__col _lg_6 _sm_12">
 						<img src="../assets/analytic_1.png" alt="" />
 					</div>
 				</div>
@@ -62,11 +62,11 @@
 			/>
 		</svg></div>
 			<div class="section__content">
-				<div class="grid__row _lg_items_center">
-					<div class="grid__col _lg_6">
+				<div class="grid__row _lg_items_center _sm_reverse_col">
+					<div class="grid__col _lg_6 _sm_12">
 						<img src="../assets/analytic_2.png" alt="" />
 					</div>
-					<div class="grid__col _lg_6">
+					<div class="grid__col _lg_6 _sm_12">
 						<div class="item-title">
 							<h1 class="text-blue text-bold">2 <span class="number text-transform">этап</span></h1>
 							<p class="text-margin text-white title _md">

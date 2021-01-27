@@ -556,6 +556,10 @@
 		.section__content .section__content {
 			margin-top: 1em;
 		}
+		.grid {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 		.grid__col._sm_12 + .grid__col._sm_12 {
 			margin-top: 1em;
 		}
@@ -641,6 +645,9 @@
 			width: 100%;
 		}
 		.grid__col._sm_0 {
+			display: none;
+		}
+		svg {
 			display: none;
 		}
 	}

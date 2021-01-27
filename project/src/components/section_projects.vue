@@ -10,12 +10,12 @@
 			</div>
 			<div class="section__content">
 				<div class="grid__row _lg_items_center">
-					<div class="grid__col _lg_2">
+					<div class="grid__col _lg_2 _sm_12">
 						<p class="text-pink title _md">
 							Площадки:
 						</p>
 					</div>
-					<div class="grid__col _lg_7">
+					<div class="grid__col _lg_7 _sm_12">
 						<div class="wrap_container">
 							<img src="../assets/dnr.svg" alt="" class="wrap_item" />
 							<img src="../assets/bionicaMedia.svg" alt="" class="wrap_item" />
@@ -26,12 +26,12 @@
 			</div>
 			<div class="section__content">
 				<div class="grid__row _lg_items_center">
-					<div class="grid__col _lg_2">
+					<div class="grid__col _lg_2 _sm_12">
 						<p class="text-blue title _md">
 							Аудитория:
 						</p>
 					</div>
-					<div class="grid__col _lg_10">
+					<div class="grid__col _lg_10 _sm_12">
 						<form action="#" class="wrap_container" id="auditory">
 							<input
 								type="button"
@@ -47,12 +47,12 @@
 			</div>
 			<div class="section__content">
 				<div class="grid__row _lg_items_center">
-					<div class="grid__col _lg_2">
+					<div class="grid__col _lg_2 _sm_12">
 						<p class="text-blue title _md">
 							Нозология:
 						</p>
 					</div>
-					<div class="grid__col _lg_10">
+					<div class="grid__col _lg_10 _sm_12">
 						<form action="#" class="wrap_container">
 							<input
 								type="button"
@@ -159,6 +159,9 @@
 			}
 		},
 		computed: {
+			projects() {
+				return projects;
+			},
 			specialties() {
 				return specialties;
 			},

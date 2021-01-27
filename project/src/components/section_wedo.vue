@@ -30,7 +30,7 @@
 							data-switch="switch_01"
 						>
 							<div class="grid__row _lg_items_center">
-								<div class="grid__col _lg_7">
+								<div class="grid__col _lg_7 _sm_12">
 									<p class="title _md text-pink text-margin">
 										Редакторы/копирайтеры
 									</p>
@@ -41,7 +41,7 @@
 										>
 									</p>
 								</div>
-								<div class="grid__col _lg_5">
+								<div class="grid__col _lg_5 _sm_12">
 									<img src="../assets/switch_1.png" alt="" />
 								</div>
 							</div>

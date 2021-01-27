@@ -3,7 +3,7 @@
 		<div class="grid">
 			<div class="section__content">
 				<div class="grid__row">
-					<div class="grid__col _lg_5">
+					<div class="grid__col _lg_5 _sm_12">
 						<svg
 							width="409"
 							height="409"
@@ -3027,17 +3027,17 @@
 							</defs>
 						</svg>
 					</div>
-					<div class="grid__col _lg_7">
+					<div class="grid__col _lg_7 _sm_12">
 						<p class="title _lg text-white"><span class="text-blue">Кто</span> мы?</p>
 						<div 
 							class="section__content animation _type_slideInLeft" data-duration="1"
 							data-delay="1"
 						>
 							<div class="grid__row">
-								<div class="grid__col _lg_5">
+								<div class="grid__col _lg_5 _sm_12">
 									<p class="text-white title _md">Команда</p>
 								</div>
-								<div class="grid__col _lg_7">
+								<div class="grid__col _lg_7 _sm_12">
 									<p class="text-white">
 										Фарм-ориентированная команда, нацеленная на развитие отрасли и результативные
 										коммуникации.
@@ -3051,10 +3051,10 @@
 							data-delay="2"
 						>
 							<div class="grid__row">
-								<div class="grid__col _lg_5">
+								<div class="grid__col _lg_5 _sm_12">
 									<p class="text-white title _md">Наши возможности</p>
 								</div>
-								<div class="grid__col _lg_7">
+								<div class="grid__col _lg_7 _sm_12">
 									<p class="text-white">
 										Понимаем специфику различных нозологий.Формируем релевантный и комплаентный
 										контент для врачей, фармацевтов и потребителей.
@@ -3068,10 +3068,10 @@
 							data-delay="3"
 						>
 							<div class="grid__row">
-								<div class="grid__col _lg_5">
+								<div class="grid__col _lg_5 _sm_12">
 									<p class="text-white title _md">Наш опыт</p>
 								</div>
-								<div class="grid__col _lg_7">
+								<div class="grid__col _lg_7 _sm_12">
 									<p class="text-white">
 										Более 11 лет работаем с фармой и представителями здравоохранения.
 									</p>

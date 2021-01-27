@@ -12,16 +12,16 @@
 			</div>
 			<div class="section__content">
 				<div class="grid__row _lg_items_center">
-					<div class="grid__col _lg_2">
+					<div class="grid__col _lg_2 _sm_12">
 						<a href="tel:+79167270601" class="text-white text-center text-content">+7 916 727 06 01</a>
 					</div>	
-					<div class="grid__col _lg_2">
+					<div class="grid__col _lg_2 _sm_12">
 						<a href="tel:+79689363069" class="text-white text-center">+7 968 936 30 69</a>
 					</div>
-					<div class="grid__col _lg_3">
+					<div class="grid__col _lg_3 _sm_12">
 						<a href="mailto:info@digitvision.ru" class="text-white text-center">info@digitvision.ru</a>
 					</div>
-					<div class="grid__col _lg_5">
+					<div class="grid__col _lg_5 _sm_12">
 						<button class="text-neon feedback"><span>Оставить запрос в telegram-боте</span></button>
 					</div>
 				</div>
@@ -58,6 +58,10 @@
 				right: 0;
 				transform: translate(-30px, -50%);
 			}
+		}
+
+		a {
+			text-align: left !important;
 		}
 	}
 </style>

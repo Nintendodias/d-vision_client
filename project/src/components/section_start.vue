@@ -24,7 +24,7 @@
 			</div>
 			<div class="section__content">
 				<div class="grid__row _lg_content_center">
-					<div class="grid__col _lg_1">
+					<div class="grid__col _lg_1 _sm_6">
 						<button v-scroll-to="'.section_about'" id="next"></button>
 					</div>
 				</div>

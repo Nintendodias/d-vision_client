@@ -16,15 +16,15 @@
 			</div>
 			<div class="section__content">
 				<div class="grid__row _lg_content_end">
-					<div class="grid__col _lg_3 animation _type_slideInLeft" data-duration="0.5"
+					<div class="grid__col _lg_3 _sm_12 animation _type_slideInLeft" data-duration="0.5"
 							data-delay="0.8">
 						<p class="text-pink title _lg">01</p>
 						<p class="title _md text-white">
 							Работа со СМИ и новыми медиа
 						</p>
 					</div>
-					<div class="grid__col _lg_2"></div>
-					<div class="grid__col _lg_4 animation _type_slideInLeft" data-duration="0.5"
+					<div class="grid__col _lg_2 _sm_0"></div>
+					<div class="grid__col _lg_4 _sm_12 animation _type_slideInLeft" data-duration="0.5"
 							data-delay="4">
 						<p class="text-pink title _lg">03</p>
 						<p class="title _md text-white">
@@ -36,8 +36,8 @@
 			<div id="svg-container"></div>
 			<div class="section__content">
 				<div class="grid__row">
-					<div class="grid__col _lg_6"></div>
-					<div class="grid__col _lg_3 animation _type_slideInLeft" data-duration="0.5"
+					<div class="grid__col _lg_6 _sm_0"></div>
+					<div class="grid__col _lg_3 _sm_12 animation _type_slideInLeft" data-duration="0.5"
 							data-delay="2.7">
 						<p class="text-pink title _lg">02</p>
 						<p class="title _md text-white">

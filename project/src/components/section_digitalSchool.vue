@@ -3,7 +3,7 @@
 		<div class="grid">
 			<div class="section__content">
 				<div class="grid__row _lg_content_center">
-					<div class="grid__col _lg_8">
+					<div class="grid__col _lg_8 _sm_12">
 						<h3 class="text-center text-transform text-bold text-margin text-white">
 							<span class="text-blue">Digital</span> школа
 						</h3>
@@ -334,7 +334,7 @@
 												<b-collapse id="collapse-4" v-model="visible" class="mt-2">
 													<div class="section__content">
 														<div class="grid__row">
-															<div class="grid__col _lg_6">
+															<div class="grid__col _lg_6 _sm_12">
 																<ul class="text-digital-blue text-margin">
 																	<li>
 																		<span class="text-white">
@@ -344,7 +344,7 @@
 																	</li>
 																</ul>
 															</div>
-															<div class="grid__col _lg_6">
+															<div class="grid__col _lg_6 _sm_12">
 																<ul class="text-digital-blue text-margin">
 																	<li>
 																		<span class="text-white">
@@ -428,7 +428,7 @@
 												<b-collapse id="collapse-4" v-model="visible" class="mt-2">
 													<div class="section__content">
 														<div class="grid__row">
-															<div class="grid__col _lg_6">
+															<div class="grid__col _lg_6 _sm_12">
 																<ul class="text-digital-violet text-margin">
 																	<li>
 																		<span class="text-white">
@@ -438,7 +438,7 @@
 																	</li>
 																</ul>
 															</div>
-															<div class="grid__col _lg_6">
+															<div class="grid__col _lg_6 _sm_12">
 																<ul class="text-digital-violet text-margin">
 																	<li>
 																		<span class="text-white">
@@ -496,7 +496,7 @@
 								</p>
 								<div class="section__content">
 									<div class="grid__row">
-										<div class="grid__col _lg_6">
+										<div class="grid__col _lg_6 _sm_12">
 											<p class="text-margin text-white title _md">
 												DCJM
 											</p>
@@ -544,7 +544,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="grid__col _lg_6">
+										<div class="grid__col _lg_6 _sm_12">
 											<p class="text-margin text-white title _md">
 												Подключись к Digital
 											</p>
