@@ -57,6 +57,7 @@
 	}
 	body {
 		overflow-x: hidden;
+		background: #371365;
 	}
 	* {
 		box-sizing: border-box;
