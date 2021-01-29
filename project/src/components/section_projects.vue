@@ -168,11 +168,6 @@
 				}
 			},
 		},
-		watch: {
-			specialtyArr(value) {
-				this.specialtyArr = value
-			}
-		},
 		computed: {
 			projects() {
 				return projects;
@@ -193,12 +188,19 @@
 					const filterByNosology = (project) =>
 						this.nosologyArr.some((nosology) => project.nosology === nosology);
 
-					const test = () => {
-						return projects.filter(
-							(project) => filterBySpecialty(project) || filterByNosology(project),
-						);
-					};
-					filterProjects = test();
+					// const test = () => {
+					// 	return projects.filter(
+					// 		(project) => filterBySpecialty(project) || filterByNosology(project),
+					// 	);
+					// };
+					// filterProjects = test();
+					if (this.specialtyArr.length != 0) {
+						filterProjects = filterProjects.filter((project) => filterBySpecialty(project));
+					}
+					if (this.nosologyArr.length != 0) {
+						filterProjects = filterProjects.filter((project) => filterByNosology(project));
+					}
+
 					console.log(filterProjects)
 				}
 
