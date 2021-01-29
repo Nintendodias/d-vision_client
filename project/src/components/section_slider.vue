@@ -132,6 +132,7 @@
 
 		#carousel {
 			position: relative;
+			margin-top: 2em;
 
 			.owl-dots span {
 				background: #7774ec;
@@ -211,6 +212,9 @@
 	@media (max-width: 768px) {
 		.owl-dots {
 			margin-top: 1em !important;
+		}
+		.owl-item {
+			padding: 0 1em;
 		}
 	}
 </style>
