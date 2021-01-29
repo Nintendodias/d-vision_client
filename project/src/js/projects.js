@@ -1,4 +1,4 @@
-const projects = [
+const projects = [ 
   {
     playground: 'dnr',
     specialty: 'Неврологи',

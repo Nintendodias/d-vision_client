@@ -37,8 +37,11 @@
 								type="button"
 								v-for="specialty in specialties"
 								:key="specialty.id"
-								@click="changeSpecialtyArr($event); changeClass($event)"
-								class="wrap_item _active"
+								@click="
+									changeSpecialtyArr($event);
+									changeClass($event);
+								"
+								class="wrap_item"
 								:value="specialty.name"
 							/>
 						</form>
@@ -59,8 +62,11 @@
 								v-for="nosology in nosologies"
 								:key="nosology.id"
 								href="#"
-								@click="changeNosologyArr($event); changeClass($event)"
-								class="wrap_item _active"
+								@click="
+									changeNosologyArr($event);
+									changeClass($event);
+								"
+								class="wrap_item"
 								:value="nosology.name"
 							/>
 						</form>
@@ -71,7 +77,6 @@
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
 						<div class="projects_container">
-							
 							<a
 								:href="project.link"
 								target="_blank"
@@ -86,7 +91,6 @@
 								<p class="text-white text-magrin">
 									{{ project.description }}
 								</p>
-
 							</a>
 						</div>
 					</div>
@@ -100,6 +104,7 @@
 	import projects from '../js/projects';
 	import specialties from '../js/specialty';
 	import nosologies from '../js/nosology';
+	// import specialty from '../js/specialty';
 
 	export default {
 		name: 'section_projects',
@@ -125,8 +130,9 @@
 					'Гигиена',
 					'Здоровье полости рта',
 					'Витамины',
-					'Другое'
+					'Другое',
 				],
+				isChange: false,
 			};
 		},
 		methods: {
@@ -134,6 +140,12 @@
 				event.target.classList.toggle('_active');
 			},
 			changeSpecialtyArr(event) {
+				if (!this.isChange) {
+					console.log('asd');
+					this.specialtyArr = [];
+					this.nosologyArr = [];
+				}
+				this.isChange = true;
 				let isActive = event.target.classList.contains('_active');
 				let value = event.target.value;
 
@@ -141,7 +153,7 @@
 					let index = this.specialtyArr.indexOf(value);
 					this.specialtyArr.splice(index, 1);
 				} else {
-					this.specialtyArr.push(value)
+					this.specialtyArr.push(value);
 				}
 			},
 			changeNosologyArr(event) {
@@ -149,13 +161,16 @@
 				let value = event.target.value;
 
 				if (isActive) {
-					console.log('asd1')
 					let index = this.nosologyArr.indexOf(value);
 					this.nosologyArr.splice(index, 1);
 				} else {
-					console.log('asd2')
-					this.nosologyArr.push(value)
+					this.nosologyArr.push(value);
 				}
+			},
+		},
+		watch: {
+			specialtyArr(value) {
+				this.specialtyArr = value
 			}
 		},
 		computed: {
@@ -169,18 +184,25 @@
 				return nosologies;
 			},
 			filterProjects() {
-				const filterBySpecialty = (project) =>
-					this.specialtyArr.some((specialty) => project.specialty === specialty);
+				let filterProjects = projects;
 
-				const filterByNosology = (project) =>
-					this.nosologyArr.some((nosology) => project.nosology === nosology);
+				if (this.isChange) {
+					const filterBySpecialty = (project) =>
+						this.specialtyArr.some((specialty) => project.specialty === specialty);
 
-				const filteredProjects = () => {
-					return projects.filter((project) => filterBySpecialty(project) && filterByNosology(project));
-				};
-				
-				console.log(filteredProjects())
-				return filteredProjects();
+					const filterByNosology = (project) =>
+						this.nosologyArr.some((nosology) => project.nosology === nosology);
+
+					const test = () => {
+						return projects.filter(
+							(project) => filterBySpecialty(project) || filterByNosology(project),
+						);
+					};
+					filterProjects = test();
+					console.log(filterProjects)
+				}
+
+				return filterProjects;
 			},
 		},
 	};
@@ -197,8 +219,8 @@
 
 			.wrap_item {
 				margin-right: 1em;
-				margin-bottom: .5em;
-				margin-top: .5em;
+				margin-bottom: 0.5em;
+				margin-top: 0.5em;
 			}
 			input.wrap_item {
 				color: #a89ed9 !important;
