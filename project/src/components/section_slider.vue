@@ -10,91 +10,88 @@
 					</div>
 				</div>
 			</div>
-			<div class="section__content " >
-				<div class="grid__row">
-					<div class="grid__col _lg_12">
-						<carousel
-							id="carousel"
-							:dots="true"
-							:nav="false"
-							:center="true"
-							:responsive="{ 0: { items: 1 }, 600: { items: 3, nav: true } }"
-							:margin="40"
-							class="animation _type_slideInRight"
-							data-duration="1" data-delay="1"
-						>
-							<div class="slider__item">
-								<img src="../assets/slider_1.png" alt="" />
-								<div class="slider__text">
-									<p class="title _md text-margin text-white">
-										Медийные форматы
-									</p>
-									<p class="text-white text-margin">
-										Баннеры, рассылки, фулскрины
-									</p>
-								</div>
-							</div>
-							<div class="slider__item">
-								<img src="../assets/slider_2.png" alt="" />
-								<div class="slider__text">
-									<p class="title _md text-margin text-white">
-										Сайты любой сложности
-									</p>
-									<p class="text-white text-margin">
-										От лендингов до платформ
-									</p>
-								</div>
-							</div>
-							<div class="slider__item">
-								<img src="../assets/slider_3.png" alt="" />
-								<div class="slider__text">
-									<p class="title _md text-margin text-white">
-										CLM презентации
-									</p>
-									<p class="text-white text-margin">
-										Результативные и яркие. Простые и многоуровневые с интерактивом на приеме.
-									</p>
-								</div>
-							</div>
-							<div class="slider__item">
-								<img src="../assets/slider_4.png" alt="" />
-								<div class="slider__text">
-									<p class="title _md text-margin text-white">
-										Чат-боты
-									</p>
-									<p class="text-white text-margin">
-										Создаем боты в мессенджерах и соцсетях
-									</p>
-								</div>
-							</div>
-							<div class="slider__item">
-								<img src="../assets/slider_5.png" alt="" />
-								<div class="slider__text">
-									<p class="title _md text-margin text-white">
-										Видео контент
-									</p>
-									<p class="text-white text-margin">
-										3D анимация, съемки KOL, скетч-ролики
-									</p>
-								</div>
-							</div>
-							<div class="slider__item" v-scroll-to="'.section_footer'">
-								<div id="slider__button">
-									<div>
-										<img src="../assets/arrow_3.png" alt="" />
-										<p class="text-white">
-											Станьте нашим клиентом и ваш проект тоже будет здесь.
-										</p>
-										<p class="text-pink text-semi">
-											Это просто.
-										</p>
-									</div>
-								</div>
-							</div>
-						</carousel>
+		</div>
+		<div class="section__content ">
+			<carousel
+				id="carousel"
+				:dots="true"
+				:nav="false"
+				:center="true"
+				:responsive="{ 0: { items: 1 }, 600: { items: 3, nav: true } }"
+				:margin="40"
+				class="animation _type_slideInRight"
+				data-duration="1"
+				data-delay="1"
+			>
+				<div class="slider__item">
+					<img src="../assets/slider_1.png" alt="" />
+					<div class="slider__text">
+						<p class="title _md text-margin text-white">
+							Медийные форматы
+						</p>
+						<p class="text-white text-margin">
+							Баннеры, рассылки, фулскрины
+						</p>
 					</div>
 				</div>
-			</div>
+				<div class="slider__item">
+					<img src="../assets/slider_2.png" alt="" />
+					<div class="slider__text">
+						<p class="title _md text-margin text-white">
+							Сайты любой сложности
+						</p>
+						<p class="text-white text-margin">
+							От лендингов до платформ
+						</p>
+					</div>
+				</div>
+				<div class="slider__item">
+					<img src="../assets/slider_3.png" alt="" />
+					<div class="slider__text">
+						<p class="title _md text-margin text-white">
+							CLM презентации
+						</p>
+						<p class="text-white text-margin">
+							Результативные и яркие. Простые и многоуровневые с интерактивом на приеме.
+						</p>
+					</div>
+				</div>
+				<div class="slider__item">
+					<img src="../assets/slider_4.png" alt="" />
+					<div class="slider__text">
+						<p class="title _md text-margin text-white">
+							Чат-боты
+						</p>
+						<p class="text-white text-margin">
+							Создаем боты в мессенджерах и соцсетях
+						</p>
+					</div>
+				</div>
+				<div class="slider__item">
+					<img src="../assets/slider_5.png" alt="" />
+					<div class="slider__text">
+						<p class="title _md text-margin text-white">
+							Видео контент
+						</p>
+						<p class="text-white text-margin">
+							3D анимация, съемки KOL, скетч-ролики
+						</p>
+					</div>
+				</div>
+				<div class="slider__item" v-scroll-to="'.section_footer'">
+					<div id="slider__button">
+						<div>
+							<img src="../assets/arrow_3.png" alt="" />
+							<p class="text-white">
+								Станьте нашим клиентом и ваш проект тоже будет здесь.
+							</p>
+							<p class="text-pink text-semi">
+								Это просто.
+							</p>
+						</div>
+					</div>
+				</div>
+			</carousel>
 		</div>
 	</section>
 </template>
@@ -102,6 +99,7 @@
 <script>
 	import carousel from 'vue-owl-carousel';
 	import Vue from 'vue';
+	
 	var VueScrollTo = require('vue-scrollto');
 
 	Vue.use(VueScrollTo, {
@@ -211,7 +209,6 @@
 		}
 	}
 	@media (max-width: 768px) {
-		
 		.owl-dots {
 			margin-top: 1em !important;
 		}
