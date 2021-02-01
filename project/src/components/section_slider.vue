@@ -5,7 +5,7 @@
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
 						<h3 class="text-white animation _type_slideInLeft" data-duration=".5" data-delay="0.5">
-							<span class="text-blue">Наши</span> работы
+							<span class="text-blue">Стратегический</span> продакшен
 						</h3>
 					</div>
 				</div>
@@ -57,7 +57,7 @@
 					</div>
 				</div>
 				<div class="slider__item">
-					<img src="../assets/slider_4.png" alt="" />
+					<img src="../assets/slider_5.png" alt="" />
 					<div class="slider__text">
 						<p class="title _md text-margin text-white">
 							Чат-боты
@@ -68,7 +68,7 @@
 					</div>
 				</div>
 				<div class="slider__item">
-					<img src="../assets/slider_5.png" alt="" />
+					<img src="../assets/slider_4.png" alt="" />
 					<div class="slider__text">
 						<p class="title _md text-margin text-white">
 							Видео контент
