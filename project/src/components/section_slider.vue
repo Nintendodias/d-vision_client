@@ -5,7 +5,7 @@
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
 						<h3 class="text-white animation _type_slideInLeft" data-duration=".5" data-delay="0.5">
-							<span class="text-blue">Недавние</span> работы
+							<span class="text-blue">Наши</span> работы
 						</h3>
 					</div>
 				</div>

@@ -156,6 +156,7 @@ const projects = [
     img: 'https://digitvision.ru/galery/nahodilki.png',
     name: 'Спецпроект с компанией Silwerhof',
     description: 'Книга "Находилки"',
+    description2: 'Книга "Находилки"',
     link: 'https://www.mann-ivanov-ferber.ru/books/children/nahodilki/'
   },
 

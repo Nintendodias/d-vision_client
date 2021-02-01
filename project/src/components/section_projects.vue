@@ -2,7 +2,7 @@
 	<section class="section_projects">
 		<div class="grid">
 			<div class="section__content">
-				<div class="grid__row">
+				<div class="grid__row"> 
 					<div class="grid__col _lg_12">
 						<p class="number text-white"><span class="text-blue">Наши</span> проекты</p>
 					</div>
@@ -109,6 +109,7 @@
 	export default {
 		name: 'section_projects',
 		data() {
+			//перепистаь массивы, собирать данные с файлов
 			return {
 				specialtyArr: [
 					'Неврологи',
@@ -188,12 +189,6 @@
 					const filterByNosology = (project) =>
 						this.nosologyArr.some((nosology) => project.nosology === nosology);
 
-					// const test = () => {
-					// 	return projects.filter(
-					// 		(project) => filterBySpecialty(project) || filterByNosology(project),
-					// 	);
-					// };
-					// filterProjects = test();
 					if (this.specialtyArr.length != 0) {
 						filterProjects = filterProjects.filter((project) => filterBySpecialty(project));
 					}
@@ -210,7 +205,6 @@
 	};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 	.section_projects {
 		.wrap_container {
