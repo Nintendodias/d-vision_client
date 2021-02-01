@@ -114,30 +114,14 @@
 		data() {
 			//перепистаь массивы, собирать данные с файлов
 			return {
-				specialtyArr: [
-					'Неврологи',
-					'Кардиологи',
-					'Терапевты',
-					'Онкологи',
-					'Гинекологи',
-					'Потребители',
-				],
-				nosologyArr: [
-					'НПВС',
-					'Ноотроп',
-					'ХСН',
-					'СС-риски',
-					'Рак разного генома',
-					'Вирусные заболевания',
-					'Кандидоз',
-					'КОК',
-					'Гигиена',
-					'Здоровье полости рта',
-					'Витамины',
-					'Другое',
-				],
+				specialtyArr: specialties.map(specialty => specialty.name),
+				nosologyArr: nosologies.map(nosology => nosology.name),
 				isChange: false,
 			};
+		},
+		mounted() {
+			// console.log(this.specialtyArr)
+			// console.log()
 		},
 		methods: {
 			changeClass(event) {
@@ -252,7 +236,7 @@
 		.projects_container {
 			display: flex;
 			align-items: flex-start;
-			justify-content: center;
+			justify-content: flex-start;
 			flex-wrap: wrap;
 
 			.projects_item {
