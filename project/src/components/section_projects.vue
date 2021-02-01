@@ -4,7 +4,7 @@
 			<div class="section__content">
 				<div class="grid__row"> 
 					<div class="grid__col _lg_12">
-						<p class="number text-white"><span class="text-blue">Наши</span> проекты</p>
+						<p class="number text-white"><span class="text-blue">Стратегический</span> продакшен</p>
 					</div>
 				</div>
 			</div>
@@ -90,6 +90,9 @@
 								</p>
 								<p class="text-white text-magrin">
 									{{ project.description }}
+								</p>
+								<p class="text-white text-magrin" style="font-size:12px; color:#4ed9f9!important;">
+									{{ project.description2 }}
 								</p>
 							</a>
 						</div>
