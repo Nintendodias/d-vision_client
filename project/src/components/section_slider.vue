@@ -26,7 +26,7 @@
 				<div class="slider__item">
 					<img src="../assets/slider_1.png" alt="" />
 					<div class="slider__text">
-						<p class="title _md text-margin text-white">
+						<p class="title _md text-margin text-pink">
 							Медийные форматы
 						</p>
 						<p class="text-white text-margin">
@@ -37,7 +37,7 @@
 				<div class="slider__item">
 					<img src="../assets/slider_2.png" alt="" />
 					<div class="slider__text">
-						<p class="title _md text-margin text-white">
+						<p class="title _md text-margin text-pink">
 							Сайты любой сложности
 						</p>
 						<p class="text-white text-margin">
@@ -48,7 +48,7 @@
 				<div class="slider__item">
 					<img src="../assets/slider_3.png" alt="" />
 					<div class="slider__text">
-						<p class="title _md text-margin text-white">
+						<p class="title _md text-margin text-pink">
 							CLM презентации
 						</p>
 						<p class="text-white text-margin">
@@ -59,7 +59,7 @@
 				<div class="slider__item">
 					<img src="../assets/slider_5.png" alt="" />
 					<div class="slider__text">
-						<p class="title _md text-margin text-white">
+						<p class="title _md text-margin text-pink">
 							Чат-боты
 						</p>
 						<p class="text-white text-margin">
@@ -70,7 +70,7 @@
 				<div class="slider__item">
 					<img src="../assets/slider_4.png" alt="" />
 					<div class="slider__text">
-						<p class="title _md text-margin text-white">
+						<p class="title _md text-margin text-pink">
 							Видео контент
 						</p>
 						<p class="text-white text-margin">
