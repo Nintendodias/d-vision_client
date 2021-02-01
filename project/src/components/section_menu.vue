@@ -3,7 +3,7 @@
 		<div class="grid">
 			<b-navbar toggleable="lg">
 				<b-navbar-brand href="#">
-					<router-link to='/' v-scroll-to="'.section_start'"><img src="../assets/logo_d-vision.png" alt="" id="logo" /></router-link>
+					<router-link to='/' ><img src="../assets/logo_d-vision.png" alt="" id="logo" /></router-link>
 				</b-navbar-brand>
 
 				<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -41,28 +41,9 @@
 </template>
 
 <script>
-	import Vue from 'vue';
-	var VueScrollTo = require('vue-scrollto');
-
-	Vue.use(VueScrollTo, {
-		container: 'body',
-		duration: 500,
-		easing: 'ease',
-		offset: 0,
-		force: true,
-		cancelable: true,
-		onStart: false,
-		onDone: false,
-		onCancel: false,
-		x: false,
-		y: true,
-	});
 	
 	export default {
 		name: 'section_menu',
-		props: {
-			msg: String,
-		},
 		data() {
 			return {
 				tab: 1,
@@ -78,7 +59,6 @@
 	};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
 	.section_menu {
 		position: fixed;

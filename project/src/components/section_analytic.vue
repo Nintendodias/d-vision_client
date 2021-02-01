@@ -90,13 +90,9 @@
 <script>
 	export default {
 		name: 'section_analytic',
-		props: {
-			msg: String,
-		},
 	};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 	.section_analytic {
 		background: url(../assets/bg_abstrakt_3.png) center left no-repeat, url(../assets/bg_abstrakt_4.png) top right no-repeat, url(../assets/bg_abstrakt_6.png) bottom right no-repeat;

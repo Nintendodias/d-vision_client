@@ -652,7 +652,6 @@
 	};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 	.section_digitalSchool {
 		background: url(../assets/bg_clouds.png) center top 9% / contain no-repeat;

@@ -5,7 +5,7 @@
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
 						<h3 class="text-white animation _type_slideInLeft" data-duration=".5" data-delay="0.5">
-							<span class="text-blue">Стратегический</span> продакшен
+							<span class="text-blue">Наши</span> работы
 						</h3>
 					</div>
 				</div>
@@ -57,7 +57,7 @@
 					</div>
 				</div>
 				<div class="slider__item">
-					<img src="../assets/slider_5.png" alt="" />
+					<img src="../assets/slider_4.png" alt="" />
 					<div class="slider__text">
 						<p class="title _md text-margin text-white">
 							Чат-боты
@@ -68,7 +68,7 @@
 					</div>
 				</div>
 				<div class="slider__item">
-					<img src="../assets/slider_4.png" alt="" />
+					<img src="../assets/slider_5.png" alt="" />
 					<div class="slider__text">
 						<p class="title _md text-margin text-white">
 							Видео контент
@@ -98,34 +98,13 @@
 
 <script>
 	import carousel from 'vue-owl-carousel';
-	import Vue from 'vue';
-	
-	var VueScrollTo = require('vue-scrollto');
-
-	Vue.use(VueScrollTo, {
-		container: 'body',
-		duration: 500,
-		easing: 'ease',
-		offset: 0,
-		force: true,
-		cancelable: true,
-		onStart: false,
-		onDone: false,
-		onCancel: false,
-		x: false,
-		y: true,
-	});
 
 	export default {
 		name: 'section_slider',
-		props: {
-			msg: String,
-		},
 		components: { carousel },
 	};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
 	.section_slider {
 		padding-bottom: 2em;

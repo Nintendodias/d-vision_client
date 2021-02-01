@@ -1,5 +1,5 @@
 <template>
-	<section :style="{ background: gradient }" class="section_start" @mousemove="animateSectionStart">
+	<section id="test" :style="{ background: gradient }" class="section_start" @mousemove="animateSectionStart">
 		<div id="container_bg">
 			<div class="item-bg" data-bg="1"></div>
 			<div class="item-bg" data-bg="2"></div>
@@ -53,9 +53,6 @@
 	});
 	export default {
 		name: 'section_start',
-		props: {
-			msg: String,
-		},
 		data() {
 			return {
 				gradient:
@@ -71,7 +68,6 @@
 	};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 	.section_start {
 		min-height: 100vh;

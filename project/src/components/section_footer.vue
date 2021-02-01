@@ -33,13 +33,9 @@
 <script>
 	export default {
 		name: 'section_footer',
-		props: {
-			msg: String,
-		},
 	};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
 	.section_footer {
 		background:  url(../assets/bg_bottom.png) center top /cover no-repeat;
