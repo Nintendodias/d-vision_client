@@ -4,7 +4,7 @@
 			<div class="section__content">
 				<div class="grid__row"> 
 					<div class="grid__col _lg_12">
-						<p class="number text-white"><span class="text-blue">Стратегический</span> продакшен</p>
+						<p class="number text-white"><span class="text-blue">Стратегический</span> продакшн</p>
 					</div>
 				</div>
 			</div>

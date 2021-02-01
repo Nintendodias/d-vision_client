@@ -68,6 +68,7 @@
 		.section_footer {
 			padding-top: 5em;
 			.feedback {
+				font-size:14px;
 				&:after {
 					display: none;
 				}
