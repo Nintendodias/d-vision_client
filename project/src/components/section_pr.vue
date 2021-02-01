@@ -1701,7 +1701,6 @@
 	};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 	.section_pr {
 		background: url(../assets/bg_abstrakt_5.png) center left no-repeat;

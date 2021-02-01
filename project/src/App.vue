@@ -20,6 +20,22 @@
 
 	import section_menu from './components/section_menu.vue';
 	import section_footer from './components/section_footer.vue';
+	
+	var VueScrollTo = require('vue-scrollto');
+
+	Vue.use(VueScrollTo, {
+		container: 'body',
+		duration: 500,
+		easing: 'ease',
+		offset: -50,
+		force: true,
+		cancelable: true,
+		onStart: false,
+		onDone: false,
+		onCancel: false,
+		x: false,
+		y: true,
+	});
 
 	export default {
 		name: 'App',
@@ -34,7 +50,6 @@
 		},
 		methods: {
 			onChangeTab(data) {
-				console.log(data.digitalTab)
 				this.digitalTab = data.digitalTab;
 			},
 		},
@@ -72,13 +87,6 @@
 		--color-pink: #ee0683;
 		--color-neon: #77fdf0;
 		--color-blue: #4ed9f9;
-	}
-	#wrapper {
-		// &[data-scroll='1'] {
-		// 	#logo {
-		// 		visibility: hidden;
-		// 	}
-		// }
 	}
 	img {
 		display: block;

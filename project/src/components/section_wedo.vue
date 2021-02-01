@@ -312,7 +312,6 @@
 	};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 	.section_wedo {
 		padding-bottom: 0;
@@ -346,7 +345,8 @@
 
 				&:hover * {
 					fill: rgb(236, 64, 157);
-					transition: 1s;
+					stroke: rgb(236, 64, 157);
+					transition: .5s;
 				}
 				&#switch_01 {
 					.item-circle {

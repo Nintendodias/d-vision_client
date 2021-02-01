@@ -1,5 +1,5 @@
 <template>
-	<section class="section_projects">
+	<section class="section_projects" >
 		<div class="grid">
 			<div class="section__content">
 				<div class="grid__row"> 
@@ -107,21 +107,15 @@
 	import projects from '../js/projects';
 	import specialties from '../js/specialty';
 	import nosologies from '../js/nosology';
-	// import specialty from '../js/specialty';
 
 	export default {
 		name: 'section_projects',
 		data() {
-			//перепистаь массивы, собирать данные с файлов
 			return {
 				specialtyArr: specialties.map(specialty => specialty.name),
 				nosologyArr: nosologies.map(nosology => nosology.name),
 				isChange: false,
 			};
-		},
-		mounted() {
-			// console.log(this.specialtyArr)
-			// console.log()
 		},
 		methods: {
 			changeClass(event) {

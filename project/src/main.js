@@ -16,13 +16,19 @@ const routes = [
         path: "/projects",
         component: page_projects,
     },
-  ];
+];
 
 const router = new VueRouter({
     routes,
-    mode: "history",
+    // mode: "hash",
+    // scrollBehavior(to) {
+    //     if (to.hash) {
+    //         return {
+    //             selector: to.hash
+    //         }
+    //     }
+    // }
 });
-// -!
 
 Vue.config.productionTip = false
 
