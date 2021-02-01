@@ -142,7 +142,6 @@
 			},
 			changeSpecialtyArr(event) {
 				if (!this.isChange) {
-					console.log('asd');
 					this.specialtyArr = [];
 					this.nosologyArr = [];
 				}
@@ -158,6 +157,11 @@
 				}
 			},
 			changeNosologyArr(event) {
+				if (!this.isChange) {
+					this.specialtyArr = [];
+					this.nosologyArr = [];
+				}
+				this.isChange = true;
 				let isActive = event.target.classList.contains('_active');
 				let value = event.target.value;
 
@@ -180,6 +184,7 @@
 				return nosologies;
 			},
 			filterProjects() {
+
 				let filterProjects = projects;
 
 				if (this.isChange) {
@@ -189,14 +194,17 @@
 					const filterByNosology = (project) =>
 						this.nosologyArr.some((nosology) => project.nosology === nosology);
 
-					if (this.specialtyArr.length != 0) {
-						filterProjects = filterProjects.filter((project) => filterBySpecialty(project));
-					}
+					console.log(this.nosologyArr.length)
+					console.log(this.specialtyArr.length)
+
 					if (this.nosologyArr.length != 0) {
 						filterProjects = filterProjects.filter((project) => filterByNosology(project));
 					}
+					if (this.specialtyArr.length != 0) {
+						filterProjects = filterProjects.filter((project) => filterBySpecialty(project));
+					} 
+					
 
-					console.log(filterProjects)
 				}
 
 				return filterProjects;
@@ -241,13 +249,15 @@
 		.projects_container {
 			display: flex;
 			align-items: flex-start;
-			justify-content: space-between;
+			justify-content: center;
 			flex-wrap: wrap;
 
 			.projects_item {
 				width: 350px;
 				cursor: pointer;
 				margin-bottom: 2em;
+				margin-left: 1em;
+				margin-right: 1em;
 
 				& > img {
 					width: 350px;
