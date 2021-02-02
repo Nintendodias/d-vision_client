@@ -20,7 +20,10 @@ const routes = [
 
 const router = new VueRouter({
     routes,
-    // mode: "hash",
+    scrollBehavior () {
+        return { x: 0, y: 0 }
+    },
+    // mode: "hystory",
     // scrollBehavior(to) {
     //     if (to.hash) {
     //         return {
