@@ -2,7 +2,7 @@
 	<section class="section_wedo">
 		<div class="grid">
 			<div class="section__content">
-				<div class="grid__row">
+				<div class="grid__row bottom-space">
 					<div class="grid__col _lg_12">
 						<h3
 							class="text-margin text-white animation _type_slideInLeft"
@@ -45,9 +45,7 @@
 						>
 							<div class="grid__row _lg_items_center">
 								<div class="grid__col _lg_7 _sm_12">
-									<p class="title _md text-pink text-margin">
-										Редакторы/копирайтеры
-									</p>
+								
 									<p class="text-margin text-white title _md text-light">
 										Для каждой целевой аудитории контент разрабатывает
 										<span class="text-normal"
@@ -69,9 +67,7 @@
 						>
 							<div class="grid__row _lg_items_center">
 								<div class="grid__col _lg_8 _sm_12">
-									<p class="title _md text-pink text-margin">
-										Дизайнеры и верстальщики
-									</p>
+								
 									<p class="text-margin text-white title _md text-light">
 										Подбираем релевантных дизайнеров на проект с учетом сложности проекта.
 									</p>
@@ -90,9 +86,7 @@
 						>
 							<div class="grid__row _lg_items_center">
 								<div class="grid__col _lg_8 _sm_12">
-									<p class="title _md text-pink text-margin">
-										Сложность проектов
-									</p>
+									
 									<p class="text-margin text-white title _md text-light">
 										Можем подготовить продакшен с анимацией и 3D графикой, а также с использованием
 										авторских уникальных иллюстраций

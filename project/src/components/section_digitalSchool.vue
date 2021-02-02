@@ -303,20 +303,18 @@
 								<p class="number text-digital-blue text-margin text-bold">
 									Grade
 								</p>
-								<p class="text-margin text-white title _md">
-									Цветовой тренинг
+								<a href="http://digital.vision.tilda.ws/color" target="_blank" style="text-decoration:underline!important" class="text-margin text-bold text-digital-blue title _md">
+											Цветовой тренинг
+											</a>
+								
+								<p class="text-white text-margin">
+									Рассказываем о цветовой типологии врачей и препаратов.
 								</p>
-								<p class="text-light text-white text-margin">
-									Рассказываем о
-									<span class="text-digital-blue text-bold"
-										>цветовой типологии врачей и препаратов.</span
-									>
-								</p>
-								<p class="text-margin text-white title _md">
+								<p class="text-margin text-digital-blue text-bold _md">
 									Формат:
 								</p>
-								<p class="text-light text-white text-margin">
-									<span class="text-digital-blue text-bold">Offline,</span> приезжаем к вам или
+								<p class="text-white text-margin">
+									Offline, приезжаем к вам или
 									арендуем комфортное пространство.
 								</p>
 								<div class="section__content">
@@ -324,7 +322,7 @@
 										<div class="grid__col _lg_12">
 											<div class="item-down">
 												<p class="text-digital-blue text-bold text-margin" style="line-height: 1">
-													Как проходит?
+													Кому подходит?
 												</p>
 												<span
 													class="button-toggle"
@@ -334,58 +332,32 @@
 													@click="visible = !visible"
 												></span>
 												<b-collapse id="collapse-4" v-model="visible" class="mt-2">
-													<div class="section__content">
+												
 														<div class="grid__row">
 															<div class="grid__col _lg_6 _sm_12">
-																<ul class="text-digital-blue text-margin">
-																	<li>
-																		<span class="text-white">
-																			Рассказываем о цветовой типологии, включаем практические
-																			задания.
-																		</span>
-																	</li>
-																</ul>
+																<p class="text-white text-margin">
+																	
+																	Product менеджеры, Digital менеджеры, маркетологи	
+																	
+																</p>
 															</div>
 															<div class="grid__col _lg_6 _sm_12">
-																<ul class="text-digital-blue text-margin">
-																	<li>
-																		<span class="text-white">
-																			В перерыве предлагаем перекусить и выпить вкусный кофе.
-																		</span>
-																	</li>
-																</ul>
+																
 															</div>
 														</div>
-													</div>
+													
 												</b-collapse>
+												<div class="section__content">
+																	<div class="grid__row">
+																		<div class="grid__col _lg_12">
+																	<p class="text-margin similar-height">
+												<a href='http://digital.vision.tilda.ws/color' target="_blank" class="more my-2 my-sm-0 feedback btn-secondary btn-sm">Подробнее</a> 
+											</p>
+																		</div>
+																	</div>
+																</div>
 											</div>
-											<div class="line"></div>
-											<div class="item-down">
-												<p class="text-digital-blue text-bold text-margin" style="line-height: 1">
-													Сколько длится?
-												</p>
-												<span
-													class="button-toggle"
-													:class="visible ? null : 'collapsed'"
-													:aria-expanded="visible2 ? 'true' : 'false'"
-													aria-controls="collapse-5"
-													@click="visible2 = !visible2"
-												></span>
-												<b-collapse id="collapse-5" v-model="visible2" class="mt-2">
-													<div class="section__content">
-														<div class="grid__row">
-															<div class="grid__col _lg_12">
-																<ul class="text-digital-blue text-margin">
-																	<li>
-																		5 часов
-																		<span class="text-white">(включая перерыв на 40 мин)</span>
-																	</li>
-																</ul>
-															</div>
-														</div>
-													</div>
-												</b-collapse>
-											</div>
+											
 										</div>
 									</div>
 								</div>
@@ -400,25 +372,26 @@
 								<p class="number text-digital-violet text-margin text-bold">
 									Middle
 								</p>
-								<p class="text-margin text-white title _md">
-									Игра «Где выписка?»
-								</p>
-								<p class="text-light text-white text-margin">
+									<a href="" target="_blank" style="text-decoration:underline!important" class="text-margin text-bold text-digital-violet title _md">
+											Игра «Где выписка?»
+											</a>
+								
+								<p class="text-white text-margin">
 									Масштабный тренинг для медицинских представителей: как общаться в мессенджерах с
 									врачами?
 								</p>
-								<p class="text-margin text-white title _md">
+								<p class="text-margin text-bold text-digital-violet _md">
 									Формат:
 								</p>
-								<p class="text-light text-white text-margin">
-									<span class="text-digital-violet text-bold">Чат-боты</span> в telegram
+								<p class="text-white text-margin">
+									Чат-боты в telegram, ежедневно в заданное время ученики получают сообщение-задание от бота и обратную связь от кураторов.
 								</p>
 								<div class="section__content">
 									<div class="grid__row">
 										<div class="grid__col _lg_12">
 											<div class="item-down">
 												<p class="text-digital-violet text-bold text-margin" style="line-height: 1">
-													Как проходит?
+													Кому подходит?
 												</p>
 												<span
 													class="button-toggle"
@@ -428,60 +401,33 @@
 													@click="visible = !visible"
 												></span>
 												<b-collapse id="collapse-4" v-model="visible" class="mt-2">
-													<div class="section__content">
+												
 														<div class="grid__row">
-															<div class="grid__col _lg_6 _sm_12">
-																<ul class="text-digital-violet text-margin">
-																	<li>
-																		<span class="text-white">
-																			Создается индивидуальный чат-бот, ежедневно в заданное время
-																			ученики получают сообщение-задание от бота и обратную связь.
-																		</span>
-																	</li>
-																</ul>
+															<div class="grid__col _lg_6 _sm_12 ">
+																<p class="text-white text-margin">
+																	
+																	Медицинские представители
+																	
+																</p>
 															</div>
 															<div class="grid__col _lg_6 _sm_12">
-																<ul class="text-digital-violet text-margin">
-																	<li>
-																		<span class="text-white">
-																			Все обучение проходит в формате квеста. В конце обучения
-																			определяются 3 лучших ученика, которые получают призы. Подходит
-																			для большого количества учеников.
-																		</span>
-																	</li>
-																</ul>
+																
 															</div>
 														</div>
-													</div>
+												
 												</b-collapse>
-											</div>
-											<div class="line"></div>
-											<div class="item-down">
-												<p class="text-digital-violet text-bold text-margin" style="line-height: 1">
-													Сколько длится?
-												</p>
-												<span
-													class="button-toggle"
-													:class="visible ? null : 'collapsed'"
-													:aria-expanded="visible2 ? 'true' : 'false'"
-													aria-controls="collapse-5"
-													@click="visible2 = !visible2"
-												></span>
-												<b-collapse id="collapse-5" v-model="visible2" class="mt-2">
 													<div class="section__content">
-														<div class="grid__row">
-															<div class="grid__col _lg_12">
-																<ul class="text-digital-violet text-margin">
-																	<li>
-																		<span class="text-digital-violet text-bold">От 2х до 3х</span>
-																		недель
-																	</li>
-																</ul>
-															</div>
-														</div>
-													</div>
-												</b-collapse>
+																	<div class="grid__row">
+																		<div class="grid__col _lg_12">
+																	<p class="text-margin similar-height">
+												<a href='#' target="_blank" class="more my-2 my-sm-0 feedback btn-secondary btn-sm">Подробнее</a> 
+											</p>
+																		</div>
+																	</div>
+																</div>
 											</div>
+											
+											
 										</div>
 									</div>
 								</div>
@@ -499,19 +445,19 @@
 								<div class="section__content">
 									<div class="grid__row">
 										<div class="grid__col _lg_6 _sm_12">
-											<p class="text-margin text-white title _md">
+											<a href="" target="_blank" style="text-decoration:underline!important" class="text-margin text-bold text-digital-green title _md">
 												DCJM
-											</p>
-											<p class="text-light text-white text-margin similar-height" >
+											</a>
+											<p class="text-white text-margin similar-height" >
 												Составляем подробную карту портретов и каналов коммуникаций с целевой
 												аудиторией.
 											</p>
-											<p class="text-margin text-white title _md">
+											<p class="text-margin text-bold text-digital-green _md">
 												Формат:
 											</p>
-											<p class="text-light text-white text-margin">
-												<span class="text-digital-green text-bold">Offline,</span> приезжаем к вам в
-												любой день.
+											<p class="text-white text-margin">
+												Offline, приезжаем к вам в
+												любой день. Курс в режиме интенсив: 6 часов. 
 											</p>
 											<div class="section__content">
 												<div class="grid__row">
@@ -521,7 +467,7 @@
 																class="text-digital-green text-bold text-margin"
 																style="line-height: 1"
 															>
-																Как проходит?
+																Кому подходит?
 															</p>
 															<span
 																class="button-toggle"
@@ -532,33 +478,45 @@
 															></span>
 															<b-collapse id="collapse-4" v-model="visible" class="mt-2">
 																<div class="section__content">
-																	<ul class="text-digital-green text-margin">
-																		<li>
-																			<span class="text-white">
-																				Рассказываем в режиме интенсива, что такое DCJM, как с этим работать и для чего необходимо составлять  карты, в интенсив включаем практические задания. 
-																			</span>
-																		</li>
-																	</ul>
+																	<p class="text-white text-margin">
+																		
+																	Product менеджеры, Digital менеджеры
+																		
+																	</p>
 																</div>
 															</b-collapse>
+																<div class="section__content">
+																	<div class="grid__row">
+																		<div class="grid__col _lg_12">
+																	<p class="text-margin similar-height">
+												<a href='#' target="_blank" class="more my-2 my-sm-0 feedback btn-secondary btn-sm">Подробнее</a> 
+											</p>
+																		</div>
+																	</div>
+																</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="grid__col _lg_6 _sm_12">
-											<p class="text-margin text-white title _md">
-												Подключись к Digital
+											<a href='http://digital.vision.tilda.ws/oratory' class="text-margin text-bold text-digital-green title _md" target="_blank" style="text-decoration:underline!important">
+												Ораторское искусство
+											</a>
+											<p class="text-white text-margin similar-height">
+												Обучаем самым важным и продуктивным техникам, улучшающим качество речи <br>
+												
 											</p>
-											<p class="text-light text-white text-margin similar-height">
-												Тренинг для product-менеджеров, включающий структурное обучение digital, с учетом стратегии планирования по препаратам
+										
+											<p class="text-margin text-digital-green _md text-bold">
+												Формат: 
 											</p>
-											<p class="text-margin text-white title _md">
-												Формат:
-											</p>
-											<p class="text-light text-white text-margin">
-												<span class="text-digital-green text-bold">Online тренинг</span> с подключение мессенджеров
-											</p>
+										
+												<p class="text-white text-margin">
+												Два варианта: интенсив (курс одного дня) и полное погружение (3 недели, включает online и offline занятия)
+												<p>
+												
+										
 											<div class="section__content">
 												<div class="grid__row">
 													<div class="grid__col _lg_12">
@@ -567,7 +525,7 @@
 																class="text-digital-green text-bold text-margin"
 																style="line-height: 1"
 															>
-																Как проходит?
+																Кому подходит?
 															</p>
 															<span
 																class="button-toggle"
@@ -580,49 +538,28 @@
 																<div class="section__content">
 																	<div class="grid__row">
 																		<div class="grid__col _lg_12">
-																			<ul class="text-digital-green text-margin">
-																				<li>
-																					<span class="text-white">
-																						Индивидуальные группы в мессенджерах с обратной связью от куратора, получение заданий в виде коротких видеороликов и инфографики, отработка домашних заданий.
-																					</span>
-																				</li>
-																			</ul>
+																		<p class="text-white text-margin">
+												Product менеджеры, BU Head, Digital менеджеры, CEO
+												</p>
+																		
 																		</div>
 																	</div>
 																</div>
 															</b-collapse>
-														</div>
-														<div class="line"></div>
-														<div class="item-down">
-															<p
-																class="text-digital-green text-bold text-margin"
-																style="line-height: 1"
-															>
-																Сколько длится?
-															</p>
-															<span
-																class="button-toggle"
-																:class="visible ? null : 'collapsed'"
-																:aria-expanded="visible3 ? 'true' : 'false'"
-																aria-controls="collapse-5"
-																@click="visible3 = !visible3"
-															></span>
-															<b-collapse id="collapse-5" v-model="visible3" class="mt-2">
+
 																<div class="section__content">
 																	<div class="grid__row">
 																		<div class="grid__col _lg_12">
-																			<ul class="text-digital-green text-margin">
-																				<li>
-																					<span class="text-digital-green text-bold"
-																						>5 дней,</span
-																					> 1 час в день
-																				</li>
-																			</ul>
+																	<p class="text-margin similar-height">
+												<a target="_blank" href='http://digital.vision.tilda.ws/oratory' class="more my-2 my-sm-0 feedback btn-secondary btn-sm">Подробнее</a> 
+											</p>
 																		</div>
 																	</div>
 																</div>
-															</b-collapse>
+																
 														</div>
+														
+														
 													</div>
 												</div>
 											</div>
@@ -653,6 +590,18 @@
 </script>
 
 <style lang="less" scoped>
+
+.more {
+    height: 44px;
+    width: 150px;
+    border: 3px solid #4ed9f9 !important;
+    border-radius: 60px;
+    background: none;
+    color: var(--color-neon) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 	.section_digitalSchool {
 		background: url(../assets/bg_clouds.png) center top 9% / contain no-repeat;
 

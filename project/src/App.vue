@@ -160,7 +160,7 @@
 	//grid
 	section,
 	footer {
-		padding: 5em 0;
+		padding: 7em 0;
 	}
 	.section__content {
 		width: 100%;
@@ -283,13 +283,13 @@
 			color: var(--color-pink) !important;
 		}
 		&-digital-blue {
-			color: #4696f5;
+			color: #4696f5!important;
 		}
 		&-digital-green {
-			color: #36a7c0;
+			color: #36a7c0!important;
 		}
 		&-digital-violet {
-			color: #a01dc1;
+			color: #a01dc1!important;
 		}
 	}
 	ul {
@@ -367,6 +367,7 @@
 		animation-fill-mode: both !important;
 	}
 
+.bottom-space {padding-bottom:2em;}
 	.section__content {
 		&._visible {
 			.animation {
