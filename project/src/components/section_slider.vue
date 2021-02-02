@@ -182,7 +182,7 @@
 			.slider__item {
 				& > img {
 					height: 275px;
-					object-fit: cover;
+					object-fit: contain;
 					margin-bottom: 1em;
 				}
 			}
