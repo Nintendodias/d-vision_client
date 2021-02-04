@@ -5,7 +5,7 @@
 				<div class="grid__row">
 					<div class="grid__col _lg_12">
 						<p class="title _lg text-blue text-bold animation _type_slideInLeft" data-duration=".5" data-delay=".5">
-							Хотите узнать, <br>как мы работаем?
+							Получить свою стратегию:
 						</p>
 					</div>
 				</div>
@@ -22,7 +22,7 @@
 						<a href="mailto:info@digitvision.ru" class="text-white text-center animation _type_slideInLeft" data-duration=".5" data-delay="1.5">info@digitvision.ru</a>
 					</div>
 					<div class="grid__col _lg_5 _sm_12">
-						<button class="text-neon feedback animation _type_slideInUp" data-duration=".5" data-delay="2"><span>Оставить запрос в telegram-боте</span></button>
+					<!--	<button class="text-neon feedback animation _type_slideInUp" data-duration=".5" data-delay="2"><span>Оставить запрос в telegram-боте</span></button> -->
 					</div>
 				</div>
 			</div>
