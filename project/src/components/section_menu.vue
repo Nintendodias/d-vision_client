@@ -26,13 +26,12 @@
 							<b-dropdown-item href="#" @click="tab = 3, changeTab()" v-scroll-to="'#digital_container'"><router-link to='/'>High</router-link></b-dropdown-item>
 						</b-nav-item-dropdown>
 
-						<b-button
-							v-scroll-to="'.section_footer'"
+						<a href="mailto:info@digitvision.ru?subject=Получить свою стратегию&body=Здравствуйте! 
+						Пожалуйста, свяжитесь со мной."
 							size="sm"
-							class="my-2 my-sm-0 feedback"
-							type="submit"
-							><span>Связаться с нами</span></b-button
-						>
+							class="btn my-2 my-sm-0 feedback btn-secondary btn-sm"
+						
+							><span>Связаться с нами</span></a>
 					</b-navbar-nav>
 				</b-collapse>
 			</b-navbar>
