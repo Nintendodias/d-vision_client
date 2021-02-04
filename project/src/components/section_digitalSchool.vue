@@ -303,7 +303,7 @@
 								<p class="number text-digital-blue text-margin text-bold">
 									Grade
 								</p>
-								<a href="http://digital.vision.tilda.ws/color" target="_blank" style="text-decoration:underline!important" class="text-margin text-bold text-digital-blue title _md">
+								<a href="#" target="_blank" style="text-decoration:underline!important" class="text-margin text-bold text-digital-blue title _md">
 											Цветовой тренинг
 											</a>
 								
@@ -351,7 +351,7 @@
 																	<div class="grid__row">
 																		<div class="grid__col _lg_12">
 																	<p class="text-margin similar-height">
-												<a href='http://digital.vision.tilda.ws/color' target="_blank" class="more my-2 my-sm-0 feedback btn-secondary btn-sm">Подробнее</a> 
+											<!--	<a href='http://digital.vision.tilda.ws/color' target="_blank" class="more my-2 my-sm-0 feedback btn-secondary btn-sm">Подробнее</a> -->
 											</p>
 																		</div>
 																	</div>
@@ -420,7 +420,7 @@
 																	<div class="grid__row">
 																		<div class="grid__col _lg_12">
 																	<p class="text-margin similar-height">
-												<a href='#' target="_blank" class="more my-2 my-sm-0 feedback btn-secondary btn-sm">Подробнее</a> 
+											<!--	<a href='#' target="_blank" class="more my-2 my-sm-0 feedback btn-secondary btn-sm">Подробнее</a> -->
 											</p>
 																		</div>
 																	</div>
@@ -489,7 +489,7 @@
 																	<div class="grid__row">
 																		<div class="grid__col _lg_12">
 																	<p class="text-margin similar-height">
-												<a href='#' target="_blank" class="more my-2 my-sm-0 feedback btn-secondary btn-sm">Подробнее</a> 
+										<!--		<a href='#' target="_blank" class="more my-2 my-sm-0 feedback btn-secondary btn-sm">Подробнее</a> -->
 											</p>
 																		</div>
 																	</div>
