@@ -340,11 +340,14 @@
 		border-radius: 60px;
 		background: none;
 		color: var(--color-neon) !important;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
 		span {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+            color: var(--color-neon) !important;
 
 			&:before {
 				content: '';
