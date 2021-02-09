@@ -22,7 +22,7 @@
 						<a href="mailto:info@digitvision.ru" class="text-white text-center animation _type_slideInLeft" data-duration=".5" data-delay="1.5">info@digitvision.ru</a>
 					</div>
 					<div class="grid__col _lg_5 _sm_12">
-					<!--	<button class="text-neon feedback animation _type_slideInUp" data-duration=".5" data-delay="2"><span>Оставить запрос в telegram-боте</span></button> -->
+					<a href="https://t.me/DigitalVisionBot" class="text-neon feedback animation _type_slideInUp" data-duration=".5" data-delay="2"><span>Оставить запрос в telegram-боте</span></a> 
 					</div>
 				</div>
 			</div>
