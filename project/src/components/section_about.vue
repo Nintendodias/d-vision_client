@@ -3087,7 +3087,7 @@
 						>
 							<div class="grid__row">
 								<div class="grid__col _lg_12">
-									<router-link to='/projects' class="text-blue text-margin">Смотреть галерею</router-link>
+									<!-- <router-link to='/projects' class="text-blue text-margin">Смотреть галерею</router-link> -->
 									
 								</div>
 							</div>
