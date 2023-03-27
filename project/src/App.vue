@@ -11,6 +11,7 @@
 <script>
 	import Vue from 'vue';
 	import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue';
+	import {scroller} from 'vue-scrollto/src/scrollTo'
 
 	import 'bootstrap/dist/css/bootstrap.css';
 	import 'bootstrap-vue/dist/bootstrap-vue.css';
@@ -36,6 +37,14 @@
 		x: false,
 		y: true,
 	});
+
+	if (window.location.hash.includes('school')) {
+		setTimeout(() => {
+			const firstScrollTo = scroller();
+
+			firstScrollTo('.section_digitalSchool')
+		}, 500)
+	}
 
 	export default {
 		name: 'App',
